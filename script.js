@@ -51,7 +51,8 @@ document.addEventListener('DOMContentLoaded', () => {
       '.section-subtitle',
       '.bento__card',
       '.ecosystem__card',
-      '.about__stat'
+      '.about__stat',
+      '.showcase-bento__card'
     ];
 
     selectors.forEach(selector => {
@@ -99,6 +100,12 @@ document.addEventListener('DOMContentLoaded', () => {
     card.style.transitionDelay = `${i * 0.1}s`;
   });
 
+  // --- Stagger animation for showcase bento cards ---
+  const showcaseBentoCards = document.querySelectorAll('.showcase-bento__card');
+  showcaseBentoCards.forEach((card, i) => {
+    card.style.transitionDelay = `${i * 0.12}s`;
+  });
+
   // --- Stagger animation for about stats ---
   const aboutStats = document.querySelectorAll('.about__stat');
   aboutStats.forEach((stat, i) => {
@@ -138,27 +145,25 @@ document.addEventListener('DOMContentLoaded', () => {
       const particle = document.createElement('div');
       particle.classList.add('particle');
 
-      // Random position centered around the beam
-      const centerX = 50;
-      const spread = 30;
-      const x = centerX + (Math.random() - 0.5) * spread;
+      // Random position — full width of the hero
+      const x = Math.random() * 100;
       particle.style.left = x + '%';
-      particle.style.bottom = Math.random() * 40 + '%';
+      particle.style.bottom = Math.random() * 50 + '%';
 
-      // Random size
-      const size = Math.random() * 3 + 1;
+      // Random size — larger particles for more prominence
+      const size = Math.random() * 4 + 1.5;
       particle.style.width = size + 'px';
       particle.style.height = size + 'px';
 
       // Random duration and delay
-      const duration = Math.random() * 6 + 5;
+      const duration = Math.random() * 7 + 5;
       particle.style.animationDuration = duration + 's';
-      particle.style.animationDelay = Math.random() * 2 + 's';
+      particle.style.animationDelay = Math.random() * 1.5 + 's';
 
       // Random color from gold palette
-      const colors = ['#F5C242', '#B8860B', '#CD7F32', '#E8922F', '#FFD666'];
+      const colors = ['#F5C242', '#B8860B', '#CD7F32', '#E8922F', '#FFD666', '#FBBF24'];
       particle.style.background = colors[Math.floor(Math.random() * colors.length)];
-      particle.style.boxShadow = `0 0 ${size * 2}px ${particle.style.background}`;
+      particle.style.boxShadow = `0 0 ${size * 3}px ${particle.style.background}`;
 
       particleContainer.appendChild(particle);
 
@@ -168,16 +173,57 @@ document.addEventListener('DOMContentLoaded', () => {
       }, (duration + 2) * 1000);
     };
 
-    // Spawn particles continuously
+    // Spawn particles continuously — faster rate for more density
     const spawnParticles = () => {
       createParticle();
-      setTimeout(spawnParticles, Math.random() * 400 + 200);
+      setTimeout(spawnParticles, Math.random() * 200 + 80);
     };
     spawnParticles();
 
-    // Initial burst
-    for (let i = 0; i < 20; i++) {
-      setTimeout(createParticle, i * 100);
+    // Initial burst — more particles for immediate impact
+    for (let i = 0; i < 40; i++) {
+      setTimeout(createParticle, i * 60);
+    }
+  }
+
+  // --- Floating Particles for Showcase Bento ---
+  const bentoParticleContainer = document.getElementById('bentoParticles');
+  if (bentoParticleContainer) {
+    const createBentoParticle = () => {
+      const particle = document.createElement('div');
+      particle.classList.add('particle');
+
+      const x = Math.random() * 100;
+      particle.style.left = x + '%';
+      particle.style.bottom = Math.random() * 30 + '%';
+
+      const size = Math.random() * 3.5 + 1;
+      particle.style.width = size + 'px';
+      particle.style.height = size + 'px';
+
+      const duration = Math.random() * 8 + 6;
+      particle.style.animationDuration = duration + 's';
+      particle.style.animationDelay = Math.random() * 2 + 's';
+
+      const colors = ['#F5C242', '#B8860B', '#CD7F32', '#E8922F', '#FFD666'];
+      particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+      particle.style.boxShadow = `0 0 ${size * 3}px ${particle.style.background}`;
+
+      bentoParticleContainer.appendChild(particle);
+
+      setTimeout(() => {
+        particle.remove();
+      }, (duration + 2) * 1000);
+    };
+
+    const spawnBentoParticles = () => {
+      createBentoParticle();
+      setTimeout(spawnBentoParticles, Math.random() * 350 + 150);
+    };
+    spawnBentoParticles();
+
+    for (let i = 0; i < 15; i++) {
+      setTimeout(createBentoParticle, i * 120);
     }
   }
 });
