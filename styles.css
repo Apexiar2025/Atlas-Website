@@ -577,9 +577,18 @@ img { max-width: 100%; }
 .hero__subtitle {
   font-size: clamp(0.95rem, 2vw, 1.15rem);
   color: var(--text-muted);
-  max-width: 560px;
+  max-width: 620px;
   margin: 0 auto 2rem;
   line-height: 1.7;
+}
+
+.hero__tagline {
+  font-size: clamp(0.9rem, 1.8vw, 1.15rem);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-light);
+  margin-bottom: 1.4rem;
 }
 
 .hero__cta {
