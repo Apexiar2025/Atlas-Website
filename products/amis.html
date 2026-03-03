@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AMIS — Incident Reporting | Apexair</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a href="../index.html" class="navbar__logo">
+        <img src="../assets/Apexiar.png" alt="Apexair" class="navbar__logo-img">
+      </a>
+
+      <nav class="navbar__links" id="navLinks">
+        <a href="../index.html">Home</a>
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="../index.html#ecosystem">Eco-System</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="navbar__actions">
+        <a href="#" class="btn btn--ghost">Sign In</a>
+        <a href="#" class="btn btn--primary btn--sm">Get Started</a>
+      </div>
+
+      <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== MOBILE NAV OVERLAY ===== -->
+  <div class="mobile-nav" id="mobileNav">
+    <nav class="mobile-nav__links">
+      <a href="../index.html">Home</a>
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="../index.html#ecosystem">Eco-System</a>
+      <a href="#contact">Contact</a>
+      <div class="mobile-nav__actions">
+        <a href="#" class="btn btn--ghost">Sign In</a>
+        <a href="#" class="btn btn--primary">Get Started</a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
+    <div class="hero__vortex">
+      <div class="hero__vortex-core"></div>
+      <div class="hero__vortex-wide"></div>
+      <div class="hero__vortex-flare"></div>
+    </div>
+    <div class="hero__glow"></div>
+    <div class="hero__glow-beam"></div>
+    <div class="hero__glow-beam hero__glow-beam--wide"></div>
+    <div class="hero__particles" id="heroParticles"></div>
+    <div class="hero__gradient-overlay"></div>
+    <div class="container hero__inner">
+      <div class="product-badge">AMIS</div>
+      <h1 class="hero__title">
+        Incident<br>Reporting,<br>Streamlined
+      </h1>
+      <p class="hero__subtitle">
+        AMIS gives your teams the power to report, track, and resolve incidents with precision.
+        Photo capture, auto-escalation, severity classification, and full investigation workflows — all in real time.
+      </p>
+      <a href="#" class="btn btn--primary btn--lg hero__cta">
+        Get Started <span class="btn__arrow">&rarr;</span>
+      </a>
+    </div>
+
+    <!-- Product Showcase -->
+    <div class="showcase">
+      <div class="showcase__window showcase__main">
+        <div class="app-mock">
+          <div class="app-mock__sidebar">
+            <div class="app-mock__sidebar-logo">
+              <div class="mock-avatar mock-avatar--brand"></div>
+              <span>AMIS</span>
+            </div>
+            <div class="app-mock__sidebar-search">
+              <span>&#128269; Search incidents</span>
+            </div>
+            <ul class="app-mock__sidebar-nav">
+              <li class="active">&#9888;&#65039; Active Incidents</li>
+              <li>&#128200; Dashboard</li>
+              <li>&#128269; Investigations</li>
+              <li>&#128203; Reports</li>
+              <li>&#128276; Notifications</li>
+            </ul>
+            <div class="app-mock__sidebar-section">
+              <small>RECENT INCIDENTS</small>
+              <ul>
+                <li>&#128308; #1042 — Access Gate</li>
+                <li>&#128992; #1041 — Slip Hazard</li>
+                <li>&#128994; #1040 — Near Miss</li>
+              </ul>
+            </div>
+          </div>
+          <div class="app-mock__content">
+            <div class="app-mock__header">
+              <span>Incidents &rsaquo; Active &rsaquo; <strong>#1042 — Broken Access Gate</strong></span>
+            </div>
+            <div class="app-mock__toolbar">
+              <span class="tab active">Details</span>
+              <span class="tab">Timeline</span>
+              <span class="tab">Evidence</span>
+              <span class="tab">Actions</span>
+            </div>
+            <div class="app-mock__columns">
+              <div class="app-mock__col">
+                <div class="col-header"><span class="dot dot--red"></span> CRITICAL <span class="badge">3</span></div>
+                <div class="mock-card">
+                  <strong>#1042 — Broken Access Gate</strong>
+                  <p>North entrance gate not securing</p>
+                  <div class="mock-tags"><span class="tag tag--red">Critical</span><span class="tag tag--amber">Security</span></div>
+                  <div class="mock-meta">Reported 1h ago &bull; Security Team</div>
+                </div>
+                <div class="mock-card">
+                  <strong>#1039 — Chemical Spill</strong>
+                  <p>Small spill in loading bay area</p>
+                  <div class="mock-tags"><span class="tag tag--red">Critical</span><span class="tag tag--purple">HAZMAT</span></div>
+                  <div class="mock-meta">3h ago &bull; Warehouse Staff</div>
+                </div>
+              </div>
+              <div class="app-mock__col">
+                <div class="col-header"><span class="dot dot--amber"></span> INVESTIGATING <span class="badge">5</span></div>
+                <div class="mock-card">
+                  <strong>#1041 — Slip Hazard</strong>
+                  <p>Wet floor near canteen entrance</p>
+                  <div class="mock-tags"><span class="tag tag--amber">Medium</span><span class="tag tag--blue">H&amp;S</span></div>
+                  <div class="mock-meta">Yesterday &bull; Assigned: L. Wong</div>
+                </div>
+                <div class="mock-card">
+                  <strong>#1038 — Electrical Fault</strong>
+                  <p>Flickering lights in corridor B</p>
+                  <div class="mock-tags"><span class="tag tag--amber">Medium</span><span class="tag tag--blue">Electrical</span></div>
+                  <div class="mock-meta">2 days ago &bull; Under review</div>
+                </div>
+              </div>
+              <div class="app-mock__col">
+                <div class="col-header"><span class="dot dot--green"></span> RESOLVED <span class="badge">234</span></div>
+                <div class="mock-card">
+                  <strong>#1040 — Near Miss</strong>
+                  <p>Forklift near miss in aisle 4</p>
+                  <div class="mock-tags"><span class="tag tag--green">Resolved</span><span class="tag tag--purple">Safety</span></div>
+                  <div class="mock-meta">Feb 27 &bull; Actions completed</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="showcase__window showcase__inbox">
+        <div class="inbox-mock">
+          <div class="inbox-mock__header">
+            <strong>Incident Alerts</strong>
+            <span class="inbox-close">&times;</span>
+          </div>
+          <div class="inbox-mock__tabs">
+            <span class="tab active">All</span>
+            <span class="tab">Critical <span class="notif-badge">3</span></span>
+            <span class="tab">Updates</span>
+          </div>
+          <ul class="inbox-mock__list">
+            <li>
+              <div class="mock-avatar" style="background:#ef4444;"></div>
+              <div><strong>Incident #1042</strong> — Broken access gate <em>escalated</em><br><small>1 hour ago &bull; North Entrance</small></div>
+            </li>
+            <li>
+              <div class="mock-avatar" style="background:#ef4444;"></div>
+              <div><strong>Incident #1039</strong> — Chemical spill <em>reported</em><br><small>3 hours ago &bull; Loading Bay</small></div>
+            </li>
+            <li>
+              <div class="mock-avatar" style="background:#f59e0b;"></div>
+              <div><strong>Incident #1041</strong> — Investigation <em>assigned</em><br><small>Yesterday &bull; L. Wong</small></div>
+            </li>
+            <li>
+              <div class="mock-avatar" style="background:#10b981;"></div>
+              <div><strong>Incident #1040</strong> — Marked as <em>resolved</em><br><small>Yesterday &bull; All actions complete</small></div>
+            </li>
+            <li>
+              <div class="mock-avatar" style="background:#B8860B;"></div>
+              <div><strong>Monthly report</strong> generated for February<br><small>2 days ago &bull; Compliance</small></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BENTO SHOWCASE SECTION ===== -->
+  <section class="bento" id="productivity">
+    <div class="container">
+      <h2 class="section-title">Incident management, reimagined</h2>
+      <p class="section-subtitle">AMIS takes incident reporting from reactive paperwork to proactive, data-driven safety management.</p>
+      <ul class="bento__grid">
+        <!-- Card 1 — Quick Report -->
+        <li class="bento__card bento__card--tall">
+          <div class="bento__card-visual">
+            <div class="bento__qr-mock">
+              <div class="bento__phone">
+                <div class="bento__phone-notch"></div>
+                <div class="bento__phone-screen" style="padding: 8px;">
+                  <div style="width: 100%; text-align: left;">
+                    <div style="font-size: 0.6rem; font-weight: 700; color: #fff; margin-bottom: 6px;">REPORT INCIDENT</div>
+                    <div style="background: rgba(255,255,255,0.08); border-radius: 6px; padding: 5px 8px; margin-bottom: 4px; font-size: 0.55rem; color: #9ca3af;">Type: Safety Hazard</div>
+                    <div style="background: rgba(255,255,255,0.08); border-radius: 6px; padding: 5px 8px; margin-bottom: 4px; font-size: 0.55rem; color: #9ca3af;">Severity: &#128308; Critical</div>
+                    <div style="background: rgba(255,255,255,0.08); border-radius: 6px; padding: 5px 8px; margin-bottom: 4px; font-size: 0.55rem; color: #9ca3af;">Location: Zone B</div>
+                    <div style="background: rgba(239,68,68,0.2); border-radius: 6px; padding: 5px 8px; font-size: 0.55rem; color: #ef4444; text-align: center; font-weight: 600;">&#128247; Add Photo</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bento__card-text">
+            <h3><strong>Quick Report.</strong> Log incidents in seconds from any device. Capture photos, set severity, and pin the exact location.</h3>
+          </div>
+        </li>
+
+        <!-- Card 2 — Severity Dashboard -->
+        <li class="bento__card bento__card--tall">
+          <div class="bento__card-visual">
+            <div class="bento__dashboard-mock">
+              <div class="bento__dash-header">
+                <span class="bento__dash-tab active">By Severity</span>
+                <span class="bento__dash-tab">By Type</span>
+              </div>
+              <div class="bento__dash-row">
+                <span class="tag tag--red">Critical</span>
+                <div>
+                  <strong>3 open incidents</strong>
+                  <small>Avg. response: 12 min</small>
+                </div>
+              </div>
+              <div class="bento__dash-row">
+                <span class="tag tag--amber">Medium</span>
+                <div>
+                  <strong>5 under investigation</strong>
+                  <small>Avg. resolution: 2.4 days</small>
+                </div>
+              </div>
+              <div class="bento__dash-row">
+                <span class="tag tag--green">Low</span>
+                <div>
+                  <strong>12 resolved this week</strong>
+                  <small>100% actions completed</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bento__card-text">
+            <h3><strong>Severity Dashboard.</strong> Real-time visibility into incident volume, response times, and resolution rates across all sites.</h3>
+          </div>
+        </li>
+
+        <!-- Card 3 — Investigation Timeline -->
+        <li class="bento__card bento__card--wide">
+          <div class="bento__card-visual">
+            <div class="bento__timeline-mock">
+              <div class="bento__timeline-event">
+                <div class="bento__timeline-dot"></div>
+                <div class="bento__timeline-content">
+                  <strong>Investigation — Incident #1042</strong>
+                  <small>Assigned to L. Wong</small>
+                  <small>Started: Mar 3, 2026</small>
+                  <p>Root cause analysis underway. Preliminary findings suggest mechanical failure in gate motor assembly.</p>
+                  <a class="bento__timeline-btn">View Evidence</a>
+                  <div class="bento__timeline-meta">
+                    <span>&#128247; 4 photos attached</span>
+                    <span>&#128101; 3 witnesses</span>
+                  </div>
+                </div>
+              </div>
+              <div class="bento__timeline-card-float">
+                <strong>Corrective Action</strong>
+                <small>Due: Mar 5</small>
+                <p>Replace gate motor and update maintenance schedule</p>
+              </div>
+            </div>
+          </div>
+          <div class="bento__card-text">
+            <h3><strong>Investigations.</strong> Full investigation workflows with evidence collection, witness statements, root cause analysis, and corrective actions.</h3>
+          </div>
+        </li>
+
+        <!-- Card 4 — Auto Escalation -->
+        <li class="bento__card bento__card--glow">
+          <div class="bento__card-visual bento__card-visual--center">
+            <div class="bento__bell-container">
+              <div class="bento__bell-ring bento__bell-ring--1"></div>
+              <div class="bento__bell-ring bento__bell-ring--2"></div>
+              <div class="bento__bell-ring bento__bell-ring--3"></div>
+              <div class="bento__bell-icon">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                  <path d="M24 8L6 40h36L24 8z" fill="url(#warn-grad)" opacity="0.9"/>
+                  <path d="M24 20v8" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+                  <circle cx="24" cy="33" r="1.5" fill="#fff"/>
+                  <circle cx="38" cy="12" r="5" fill="#ef4444"/>
+                  <text x="38" y="15" text-anchor="middle" font-size="7" fill="#fff" font-weight="bold">!</text>
+                  <defs>
+                    <linearGradient id="warn-grad" x1="6" y1="8" x2="42" y2="40">
+                      <stop stop-color="#B8860B"/>
+                      <stop offset="1" stop-color="#E8922F"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="bento__card-text">
+            <h3><strong>Auto-Escalation.</strong> Critical incidents automatically escalate to senior management with SMS, email, and push notifications.</h3>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES SECTION ===== -->
+  <section class="features" id="features">
+    <div class="container">
+      <h2 class="section-title">Everything you need for incident management</h2>
+      <p class="section-subtitle">Report faster. Investigate smarter. Resolve completely.</p>
+      <div class="features__grid">
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M20 6l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6l2-6z" stroke="#B8860B" stroke-width="2" fill="#B8860B" opacity="0.2"/><path d="M8 30h24M8 34h16" stroke="#B8860B" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Mobile-First Reporting</h3>
+          <p>Report incidents from the field with photo capture, GPS location, and voice-to-text descriptions.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="14" stroke="#E8922F" stroke-width="2"/><path d="M14 20h12M20 14v12" stroke="#E8922F" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Severity Classification</h3>
+          <p>Automatic and manual severity levels trigger the right response protocols and escalation paths.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M10 8h20v24H10z" stroke="#F59E0B" stroke-width="2" fill="#F59E0B" opacity="0.1"/><path d="M15 16h10M15 20h10M15 24h6" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Investigation Workflows</h3>
+          <p>Structured investigation templates, evidence collection, witness management, and root cause analysis tools.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M10 30V18M20 30V10M30 30V22" stroke="#10B981" stroke-width="3" stroke-linecap="round"/><path d="M6 34h28" stroke="#10B981" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Trend Analytics</h3>
+          <p>Identify patterns, track KPIs, and generate regulatory reports. Turn incident data into preventive insights.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <h2 class="section-title">Get started in minutes</h2>
+      <p class="section-subtitle">Three simple steps to transform your incident management.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step__number">1</div>
+          <h3>Report an Incident</h3>
+          <p>Anyone on site can report an incident in seconds — from their phone, tablet, or desktop.</p>
+        </div>
+        <div class="step__connector"></div>
+        <div class="step">
+          <div class="step__number">2</div>
+          <h3>Auto-Notify &amp; Escalate</h3>
+          <p>AMIS automatically notifies the right people based on severity, type, and location.</p>
+        </div>
+        <div class="step__connector"></div>
+        <div class="step">
+          <div class="step__number">3</div>
+          <h3>Investigate &amp; Resolve</h3>
+          <p>Follow structured workflows to investigate, assign corrective actions, and close incidents with full audit trails.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA SECTION ===== -->
+  <section class="cta-section">
+    <div class="container cta-section__inner">
+      <h2>Ready to transform incident management?</h2>
+      <p>Join safety teams using AMIS to reduce response times, improve investigation quality, and build a culture of proactive safety.</p>
+      <div class="cta-section__buttons">
+        <a href="#" class="btn btn--primary btn--lg">Start Free Trial <span class="btn__arrow">&rarr;</span></a>
+        <a href="#" class="btn btn--ghost btn--lg">Book a Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="contact">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <div class="navbar__logo">
+          <img src="../assets/Apexiar.png" alt="Apexair" class="navbar__logo-img">
+        </div>
+        <p>Enterprise solutions for facility, site, and operational management.</p>
+      </div>
+      <div class="footer__links">
+        <div class="footer__col">
+          <h4>Eco-System</h4>
+          <a href="artemis.html">Artemis</a>
+          <a href="atlas.html">Atlas</a>
+          <a href="amis.html">AMIS</a>
+          <a href="axis.html">Axis</a>
+          <a href="assure.html">Assure</a>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <a href="#">About</a>
+          <a href="#">Blog</a>
+          <a href="#">Careers</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Security</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>&copy; 2026 Apexair. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

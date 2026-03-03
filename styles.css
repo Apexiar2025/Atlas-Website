@@ -1,5 +1,5 @@
 /* ============================================
-   ATLAS — Landing Page Styles
+   APEXAIR — Multi-Page Site Styles
    Mobile-first responsive design
    ============================================ */
 
@@ -1626,6 +1626,220 @@ img { max-width: 100%; }
 .footer__bottom p {
   font-size: 0.78rem;
   color: var(--text-muted);
+}
+
+/* ============================================
+   SCROLL ANIMATIONS
+   ============================================ */
+
+/* ============================================
+   PRODUCT BADGE (product pages)
+   ============================================ */
+.product-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  color: var(--accent-light);
+  background: rgba(184,134,11,0.1);
+  border: 1px solid rgba(184,134,11,0.25);
+  border-radius: 50px;
+  padding: 6px 20px;
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+}
+
+/* ============================================
+   HERO — LANDING VARIANT (index.html)
+   ============================================ */
+.hero--landing .hero__inner {
+  padding-bottom: 3rem;
+}
+
+.hero--landing .showcase {
+  display: none; /* No app mock on landing */
+}
+
+.hero__cta-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 480px) {
+  .hero__cta-group {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* ============================================
+   ABOUT / STATS SECTION
+   ============================================ */
+.about {
+  padding: 80px 0;
+  position: relative;
+}
+
+.about__stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .about__stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.about__stat {
+  text-align: center;
+  padding: 28px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+}
+
+.about__stat:hover {
+  border-color: rgba(184,134,11,0.3);
+  box-shadow: 0 0 30px rgba(184,134,11,0.08);
+  transform: translateY(-4px);
+}
+
+.about__stat-number {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 900;
+  background: linear-gradient(135deg, #ffffff 0%, #F5C242 50%, #CD7F32 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.about__stat-label {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+/* ============================================
+   ECO-SYSTEM SECTION
+   ============================================ */
+.ecosystem {
+  padding: 80px 0;
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.ecosystem__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 640px) {
+  .ecosystem__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 960px) {
+  .ecosystem__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.ecosystem__card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+  position: relative;
+}
+
+.ecosystem__card:hover {
+  border-color: rgba(184,134,11,0.35);
+  box-shadow: 0 4px 40px rgba(184,134,11,0.1);
+  transform: translateY(-4px);
+}
+
+.ecosystem__card-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ecosystem__card-content {
+  flex: 1;
+}
+
+.ecosystem__card-content h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: 4px;
+}
+
+.ecosystem__card-tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--accent-light);
+  background: rgba(184,134,11,0.1);
+  border-radius: 50px;
+  padding: 2px 10px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.ecosystem__card-content p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.ecosystem__card-arrow {
+  position: absolute;
+  top: 24px;
+  right: 20px;
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  transition: color 0.2s, transform 0.2s;
+}
+
+.ecosystem__card:hover .ecosystem__card-arrow {
+  color: var(--accent-light);
+  transform: translateX(4px);
+}
+
+/* Make last card (5th) span center on large screens */
+@media (min-width: 960px) {
+  .ecosystem__grid .ecosystem__card:last-child:nth-child(3n+1) {
+    /* If last card is alone in its row, don't center — it should just be left */
+  }
+  .ecosystem__grid .ecosystem__card:nth-child(4) {
+    grid-column: 1 / 2;
+  }
+  .ecosystem__grid .ecosystem__card:nth-child(5) {
+    grid-column: 2 / 3;
+  }
 }
 
 /* ============================================

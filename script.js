@@ -1,5 +1,5 @@
 /* ============================================
-   ATLAS — Landing Page Scripts
+   APEXAIR — Shared Site Scripts
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -49,7 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
       '.cta-section__inner',
       '.section-title',
       '.section-subtitle',
-      '.bento__card'
+      '.bento__card',
+      '.ecosystem__card',
+      '.about__stat'
     ];
 
     selectors.forEach(selector => {
@@ -89,6 +91,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const bentoCards = document.querySelectorAll('.bento__card');
   bentoCards.forEach((card, i) => {
     card.style.transitionDelay = `${i * 0.15}s`;
+  });
+
+  // --- Stagger animation for ecosystem cards ---
+  const ecoCards = document.querySelectorAll('.ecosystem__card');
+  ecoCards.forEach((card, i) => {
+    card.style.transitionDelay = `${i * 0.1}s`;
+  });
+
+  // --- Stagger animation for about stats ---
+  const aboutStats = document.querySelectorAll('.about__stat');
+  aboutStats.forEach((stat, i) => {
+    stat.style.transitionDelay = `${i * 0.1}s`;
   });
 
   // --- Smooth scroll for anchor links (fallback) ---

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATLAS — Enhanced Site Management Made Easy</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a href="#" class="navbar__logo">
+        <img src="assets/Atlaslogo.png" alt="ATLAS" class="navbar__logo-img">
+      </a>
+
+      <nav class="navbar__links" id="navLinks">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="navbar__actions">
+        <a href="#" class="btn btn--ghost">Sign In</a>
+        <a href="#" class="btn btn--primary btn--sm">Sign Up</a>
+      </div>
+
+      <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== MOBILE NAV OVERLAY ===== -->
+  <div class="mobile-nav" id="mobileNav">
+    <nav class="mobile-nav__links">
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+      <div class="mobile-nav__actions">
+        <a href="#" class="btn btn--ghost">Sign In</a>
+        <a href="#" class="btn btn--primary">Sign Up</a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
+    <!-- Layered glow effects for cinematic depth -->
+    <div class="hero__vortex">
+      <div class="hero__vortex-core"></div>
+      <div class="hero__vortex-wide"></div>
+      <div class="hero__vortex-flare"></div>
+    </div>
+    <div class="hero__glow"></div>
+    <div class="hero__glow-beam"></div>
+    <div class="hero__glow-beam hero__glow-beam--wide"></div>
+    <div class="hero__particles" id="heroParticles"></div>
+    <div class="hero__gradient-overlay"></div>
+    <div class="container hero__inner">
+      <h1 class="hero__title">
+        Enhanced Site<br>Management<br>Made Easy
+      </h1>
+      <p class="hero__subtitle">
+        ATLAS is an all-in-one site management platform — QR code sign-in/out,
+        project tracking, incident reporting, and a full auditing suite, all in one place.
+      </p>
+      <a href="#" class="btn btn--primary btn--lg hero__cta">
+        Get Started <span class="btn__arrow">&rarr;</span>
+      </a>
+    </div>
+
+    <!-- Product Showcase -->
+    <div class="showcase">
+      <div class="showcase__window showcase__main">
+        <!-- Simulated App Dashboard -->
+        <div class="app-mock">
+          <div class="app-mock__sidebar">
+            <div class="app-mock__sidebar-logo">
+              <div class="mock-avatar mock-avatar--brand"></div>
+              <span>ATLAS</span>
+            </div>
+            <div class="app-mock__sidebar-search">
+              <span>&#128269; Search</span>
+            </div>
+            <ul class="app-mock__sidebar-nav">
+              <li class="active">&#128202; Dashboard</li>
+              <li>&#128100; Visitors</li>
+              <li>&#128196; Projects</li>
+              <li>&#9888;&#65039; Incidents</li>
+              <li>&#128203; Audits</li>
+            </ul>
+            <div class="app-mock__sidebar-section">
+              <small>YOUR SITES</small>
+              <ul>
+                <li>&#128205; HQ — London</li>
+                <li>&#128205; Warehouse A</li>
+                <li>&#128205; Site C — Manchester</li>
+              </ul>
+            </div>
+          </div>
+          <div class="app-mock__content">
+            <div class="app-mock__header">
+              <span>Your sites &rsaquo; HQ — London &rsaquo; <strong>Dashboard</strong></span>
+            </div>
+            <div class="app-mock__toolbar">
+              <span class="tab active">Overview</span>
+              <span class="tab">Visitors</span>
+              <span class="tab">Incidents</span>
+              <span class="tab">Audits</span>
+            </div>
+            <div class="app-mock__columns">
+              <div class="app-mock__col">
+                <div class="col-header"><span class="dot dot--green"></span> ON SITE <span class="badge">24</span></div>
+                <div class="mock-card">
+                  <strong>James Mitchell</strong>
+                  <p>Contractor — Electrical</p>
+                  <div class="mock-tags"><span class="tag tag--green">Signed In</span><span class="tag tag--blue">QR</span></div>
+                  <div class="mock-meta">09:14 AM &bull; Verified</div>
+                </div>
+                <div class="mock-card">
+                  <strong>Sarah Collins</strong>
+                  <p>Visitor — Client Meeting</p>
+                  <div class="mock-tags"><span class="tag tag--green">Signed In</span></div>
+                  <div class="mock-meta">10:02 AM &bull; Badge #047</div>
+                </div>
+              </div>
+              <div class="app-mock__col">
+                <div class="col-header"><span class="dot dot--amber"></span> PENDING <span class="badge">8</span></div>
+                <div class="mock-card">
+                  <strong>Fire Safety Audit</strong>
+                  <p>Scheduled inspection — Zone B</p>
+                  <div class="mock-tags"><span class="tag tag--amber">Due Today</span><span class="tag tag--purple">Audit</span></div>
+                  <div class="mock-meta">2:00 PM &bull; Assigned: D. Park</div>
+                </div>
+                <div class="mock-card">
+                  <strong>Broken access gate — North</strong>
+                  <p>Reported by security team</p>
+                  <div class="mock-tags"><span class="tag tag--red">Incident</span><span class="tag tag--amber">Medium</span></div>
+                  <div class="mock-meta">Yesterday &bull; Unresolved</div>
+                </div>
+              </div>
+              <div class="app-mock__col">
+                <div class="col-header"><span class="dot dot--blue"></span> COMPLETED <span class="badge">142</span></div>
+                <div class="mock-card">
+                  <strong>Weekly H&amp;S Walkthrough</strong>
+                  <p>All zones cleared</p>
+                  <div class="mock-tags"><span class="tag tag--green">Done</span><span class="tag tag--purple">Audit</span></div>
+                  <div class="mock-meta">Feb 28 &bull; R. Adams</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating Notification Panel -->
+      <div class="showcase__window showcase__inbox">
+        <div class="inbox-mock">
+          <div class="inbox-mock__header">
+            <strong>Activity Feed</strong>
+            <span class="inbox-close">&times;</span>
+          </div>
+          <div class="inbox-mock__tabs">
+            <span class="tab active">All</span>
+            <span class="tab">Alerts <span class="notif-badge">3</span></span>
+            <span class="tab">Sign-ins</span>
+          </div>
+          <ul class="inbox-mock__list">
+            <li>
+              <div class="mock-avatar" style="background:#B8860B;"></div>
+              <div><strong>James Mitchell</strong> signed in via <em>QR code</em><br><small>2 min ago &bull; HQ — London</small></div>
+            </li>
+            <li>
+              <div class="mock-avatar" style="background:#CD7F32;"></div>
+              <div><strong>Sarah Collins</strong> signed in at <em>Reception</em><br><small>48 min ago &bull; HQ — London</small></div>
+            </li>
+            <li>
+              <div class="mock-avatar" style="background:#ef4444;"></div>
+              <div><strong>Incident #1042</strong> — Broken access gate reported<br><small>1 hour ago &bull; Security Team</small></div>
+            </li>
+            <li>
+              <div class="mock-avatar" style="background:#f59e0b;"></div>
+              <div><strong>Fire Safety Audit</strong> due today at 2:00 PM<br><small>3 hours ago &bull; Zone B</small></div>
+            </li>
+            <li>
+              <div class="mock-avatar" style="background:#10b981;"></div>
+              <div><strong>David Park</strong> completed H&amp;S walkthrough<br><small>Yesterday &bull; All Zones</small></div>
+            </li>
+            <li>
+              <div class="mock-avatar" style="background:#B8860B;"></div>
+              <div><strong>Audit Report</strong> exported for February<br><small>Yesterday &bull; Compliance</small></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BENTO SHOWCASE SECTION ===== -->
+  <section class="bento" id="productivity">
+    <div class="container">
+      <h2 class="section-title">Unmatched site control</h2>
+      <p class="section-subtitle">ATLAS is a site management, compliance, and visitor platform that gives teams complete oversight and real-time awareness.</p>
+      <ul class="bento__grid">
+        <!-- Card 1 — QR Scanner -->
+        <li class="bento__card bento__card--tall">
+          <div class="bento__card-visual">
+            <div class="bento__qr-mock">
+              <div class="bento__phone">
+                <div class="bento__phone-notch"></div>
+                <div class="bento__phone-screen">
+                  <svg viewBox="0 0 120 120" width="80" height="80" fill="none">
+                    <rect x="10" y="10" width="30" height="30" rx="4" stroke="#B8860B" stroke-width="3"/>
+                    <rect x="80" y="10" width="30" height="30" rx="4" stroke="#B8860B" stroke-width="3"/>
+                    <rect x="10" y="80" width="30" height="30" rx="4" stroke="#B8860B" stroke-width="3"/>
+                    <rect x="18" y="18" width="14" height="14" rx="2" fill="#B8860B"/>
+                    <rect x="88" y="18" width="14" height="14" rx="2" fill="#B8860B"/>
+                    <rect x="18" y="88" width="14" height="14" rx="2" fill="#B8860B"/>
+                    <rect x="50" y="10" width="8" height="8" rx="1" fill="#B8860B" opacity="0.5"/>
+                    <rect x="62" y="10" width="8" height="8" rx="1" fill="#B8860B" opacity="0.3"/>
+                    <rect x="50" y="22" width="8" height="8" rx="1" fill="#B8860B" opacity="0.4"/>
+                    <rect x="50" y="50" width="20" height="20" rx="3" fill="#B8860B" opacity="0.6"/>
+                    <rect x="80" y="55" width="8" height="8" rx="1" fill="#B8860B" opacity="0.3"/>
+                    <rect x="95" y="55" width="15" height="8" rx="1" fill="#B8860B" opacity="0.4"/>
+                    <rect x="80" y="70" width="8" height="8" rx="1" fill="#B8860B" opacity="0.5"/>
+                    <rect x="10" y="55" width="8" height="8" rx="1" fill="#B8860B" opacity="0.4"/>
+                    <rect x="22" y="55" width="8" height="8" rx="1" fill="#B8860B" opacity="0.3"/>
+                    <rect x="55" y="80" width="8" height="8" rx="1" fill="#B8860B" opacity="0.5"/>
+                    <rect x="55" y="95" width="8" height="8" rx="1" fill="#B8860B" opacity="0.3"/>
+                    <rect x="80" y="88" width="30" height="22" rx="3" stroke="#E8922F" stroke-width="2" opacity="0.4"/>
+                  </svg>
+                  <div class="bento__scan-line"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bento__card-text">
+            <h3><strong>QR Sign-In.</strong> Visitors scan to sign in or out instantly — no paper, no queues, full digital record.</h3>
+          </div>
+        </li>
+
+        <!-- Card 2 — Site Dashboard -->
+        <li class="bento__card bento__card--tall">
+          <div class="bento__card-visual">
+            <div class="bento__dashboard-mock">
+              <div class="bento__dash-header">
+                <span class="bento__dash-tab active">Today</span>
+                <span class="bento__dash-tab">This Week</span>
+              </div>
+              <div class="bento__dash-row">
+                <span class="tag tag--red">High</span>
+                <div>
+                  <strong>Resolve fire exit blockage</strong>
+                  <small>Zone A &bull; Due 2:00 PM</small>
+                </div>
+              </div>
+              <div class="bento__dash-row">
+                <span class="tag tag--amber">Medium</span>
+                <div>
+                  <strong>Complete COSHH assessment</strong>
+                  <small>Warehouse B &bull; Due 5:00 PM</small>
+                </div>
+              </div>
+              <div class="bento__dash-row">
+                <span class="tag tag--blue">Info</span>
+                <div>
+                  <strong>Perform SEO audit on portal</strong>
+                  <small>IT Dept &bull; Ongoing</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bento__card-text">
+            <h3><strong>Site Dashboard.</strong> View every site at a glance — visitors on site, open tasks, and compliance status in one place.</h3>
+          </div>
+        </li>
+
+        <!-- Card 3 — Incident Timeline -->
+        <li class="bento__card bento__card--wide">
+          <div class="bento__card-visual">
+            <div class="bento__timeline-mock">
+              <div class="bento__timeline-event">
+                <div class="bento__timeline-dot"></div>
+                <div class="bento__timeline-content">
+                  <strong>Incident Review Meeting</strong>
+                  <small>03:00 – 04:00 pm</small>
+                  <small>Weekly on Monday</small>
+                  <p>Review all open incidents and assign corrective actions.</p>
+                  <a class="bento__timeline-btn">Join Meeting</a>
+                  <div class="bento__timeline-meta">
+                    <span>&#128337; 10 minutes before</span>
+                    <span>&#128101; 8 attendees</span>
+                  </div>
+                  <div class="bento__timeline-rsvp">
+                    <span>Going?</span>
+                    <span class="tag tag--green">Yes</span>
+                    <span class="tag tag--amber">No</span>
+                    <span class="tag tag--blue">Maybe</span>
+                  </div>
+                </div>
+              </div>
+              <div class="bento__timeline-card-float">
+                <strong>Site walkthrough briefing</strong>
+                <small>11:00 – 01:00 pm</small>
+                <p>Discuss detailed project plans and outstanding tasks</p>
+              </div>
+            </div>
+          </div>
+          <div class="bento__card-text">
+            <h3><strong>Scheduling.</strong> Transform your team's day into structured time blocks for focused site inspections and audits.</h3>
+          </div>
+        </li>
+
+        <!-- Card 4 — Notifications with radiating bell -->
+        <li class="bento__card bento__card--glow">
+          <div class="bento__card-visual bento__card-visual--center">
+            <div class="bento__bell-container">
+              <div class="bento__bell-ring bento__bell-ring--1"></div>
+              <div class="bento__bell-ring bento__bell-ring--2"></div>
+              <div class="bento__bell-ring bento__bell-ring--3"></div>
+              <div class="bento__bell-icon">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                  <path d="M24 4C18.48 4 14 8.48 14 14v8c0 2-2 4-4 6h28c-2-2-4-4-4-6v-8c0-5.52-4.48-10-10-10z" fill="url(#bell-grad)" opacity="0.9"/>
+                  <path d="M20 34c0 2.21 1.79 4 4 4s4-1.79 4-4" stroke="#E8922F" stroke-width="2" stroke-linecap="round"/>
+                  <circle cx="34" cy="10" r="5" fill="#ef4444"/>
+                  <text x="34" y="13" text-anchor="middle" font-size="7" fill="#fff" font-weight="bold">3</text>
+                  <defs>
+                    <linearGradient id="bell-grad" x1="10" y1="4" x2="38" y2="34">
+                      <stop stop-color="#B8860B"/>
+                      <stop offset="1" stop-color="#E8922F"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="bento__card-text">
+            <h3><strong>Notifications.</strong> Stay informed of every sign-in, incident, and audit update with instant real-time alerts.</h3>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES SECTION ===== -->
+  <section class="features" id="features">
+    <div class="container">
+      <h2 class="section-title">Everything you need to manage your sites</h2>
+      <p class="section-subtitle">One platform. Total control. Complete visibility.</p>
+      <div class="features__grid">
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="4" width="32" height="32" rx="6" stroke="#B8860B" stroke-width="2"/><path d="M12 12h16v16H12z" fill="#B8860B" opacity="0.15"/><path d="M15 20l3 3 7-7" stroke="#B8860B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>QR Code Sign-In/Out</h3>
+          <p>Visitors and contractors scan a QR code to sign in and out — no paper logs, instant records, full accountability.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="6" y="10" width="28" height="22" rx="4" stroke="#E8922F" stroke-width="2"/><path d="M6 16h28" stroke="#E8922F" stroke-width="2"/><circle cx="12" cy="24" r="2" fill="#E8922F"/><circle cx="20" cy="24" r="2" fill="#E8922F"/><circle cx="28" cy="24" r="2" fill="#E8922F"/></svg>
+          </div>
+          <h3>Project Management</h3>
+          <p>Track tasks, assign teams, set milestones. Kanban boards and timelines keep every project on schedule.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M20 6l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6l2-6z" stroke="#F59E0B" stroke-width="2" fill="#F59E0B" opacity="0.2"/><path d="M8 30h24M8 34h16" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Incident Reporting</h3>
+          <p>Log incidents in seconds with photos, severity levels, and automatic notifications to the right people.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M10 8h20v24H10z" stroke="#10B981" stroke-width="2" fill="#10B981" opacity="0.1"/><path d="M15 16h10M15 20h10M15 24h6" stroke="#10B981" stroke-width="2" stroke-linecap="round"/><path d="M28 28l4 4" stroke="#10B981" stroke-width="2.5" stroke-linecap="round"/><circle cx="26" cy="26" r="4" stroke="#10B981" stroke-width="2"/></svg>
+          </div>
+          <h3>Full Auditing Suite</h3>
+          <p>Schedule audits, generate compliance reports, and maintain a complete digital paper trail — always inspection-ready.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <h2 class="section-title">Get started in minutes</h2>
+      <p class="section-subtitle">Three simple steps to transform your site management.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step__number">1</div>
+          <h3>Create Your Site</h3>
+          <p>Add your location, set up zones, and configure access rules in the ATLAS dashboard.</p>
+        </div>
+        <div class="step__connector"></div>
+        <div class="step">
+          <div class="step__number">2</div>
+          <h3>Generate QR Codes</h3>
+          <p>Print or display QR codes at entry points. Visitors scan to sign in — it takes seconds.</p>
+        </div>
+        <div class="step__connector"></div>
+        <div class="step">
+          <div class="step__number">3</div>
+          <h3>Manage &amp; Audit</h3>
+          <p>Track visitors in real time, manage projects, report incidents, and run audits — all from one place.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA SECTION ===== -->
+  <section class="cta-section" id="pricing">
+    <div class="container cta-section__inner">
+      <h2>Ready to take control of your sites?</h2>
+      <p>Join hundreds of teams using ATLAS to streamline site management, improve safety, and stay compliant.</p>
+      <div class="cta-section__buttons">
+        <a href="#" class="btn btn--primary btn--lg">Start Free Trial <span class="btn__arrow">&rarr;</span></a>
+        <a href="#" class="btn btn--ghost btn--lg">Book a Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="contact">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <div class="navbar__logo">
+          <img src="assets/Atlaslogo.png" alt="ATLAS" class="navbar__logo-img">
+        </div>
+        <p>Enhanced site management for modern teams.</p>
+      </div>
+      <div class="footer__links">
+        <div class="footer__col">
+          <h4>Product</h4>
+          <a href="#">Features</a>
+          <a href="#">Pricing</a>
+          <a href="#">Integrations</a>
+          <a href="#">Changelog</a>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <a href="#">About</a>
+          <a href="#">Blog</a>
+          <a href="#">Careers</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Security</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>&copy; 2026 ATLAS. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

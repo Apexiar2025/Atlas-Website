@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Axis — AI Fault Finding | Apexair</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a href="../index.html" class="navbar__logo">
+        <img src="../assets/Apexiar.png" alt="Apexair" class="navbar__logo-img">
+      </a>
+
+      <nav class="navbar__links" id="navLinks">
+        <a href="../index.html">Home</a>
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="../index.html#ecosystem">Eco-System</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="navbar__actions">
+        <a href="#" class="btn btn--ghost">Sign In</a>
+        <a href="#" class="btn btn--primary btn--sm">Get Started</a>
+      </div>
+
+      <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== MOBILE NAV OVERLAY ===== -->
+  <div class="mobile-nav" id="mobileNav">
+    <nav class="mobile-nav__links">
+      <a href="../index.html">Home</a>
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="../index.html#ecosystem">Eco-System</a>
+      <a href="#contact">Contact</a>
+      <div class="mobile-nav__actions">
+        <a href="#" class="btn btn--ghost">Sign In</a>
+        <a href="#" class="btn btn--primary">Get Started</a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
+    <div class="hero__vortex">
+      <div class="hero__vortex-core"></div>
+      <div class="hero__vortex-wide"></div>
+      <div class="hero__vortex-flare"></div>
+    </div>
+    <div class="hero__glow"></div>
+    <div class="hero__glow-beam"></div>
+    <div class="hero__glow-beam hero__glow-beam--wide"></div>
+    <div class="hero__particles" id="heroParticles"></div>
+    <div class="hero__gradient-overlay"></div>
+    <div class="container hero__inner">
+      <div class="product-badge">AXIS</div>
+      <h1 class="hero__title">
+        AI-Powered<br>Fault Finding
+      </h1>
+      <p class="hero__subtitle">
+        Axis uses artificial intelligence to detect, diagnose, and predict equipment faults before they cause downtime.
+        Smart pattern recognition, predictive analytics, and automated root cause analysis — powered by machine learning.
+      </p>
+      <a href="#" class="btn btn--primary btn--lg hero__cta">
+        Get Started <span class="btn__arrow">&rarr;</span>
+      </a>
+    </div>
+
+    <!-- Product Showcase -->
+    <div class="showcase">
+      <div class="showcase__window showcase__main">
+        <div class="app-mock">
+          <div class="app-mock__sidebar">
+            <div class="app-mock__sidebar-logo">
+              <div class="mock-avatar mock-avatar--brand"></div>
+              <span>AXIS</span>
+            </div>
+            <div class="app-mock__sidebar-search">
+              <span>&#128269; Search systems</span>
+            </div>
+            <ul class="app-mock__sidebar-nav">
+              <li class="active">&#129302; AI Dashboard</li>
+              <li>&#128200; Predictions</li>
+              <li>&#128270; Diagnostics</li>
+              <li>&#9888;&#65039; Fault Log</li>
+              <li>&#128736; Sensors</li>
+            </ul>
+            <div class="app-mock__sidebar-section">
+              <small>MONITORED SYSTEMS</small>
+              <ul>
+                <li>&#9889; HVAC — HQ</li>
+                <li>&#9889; Generators — Depot</li>
+                <li>&#9889; Lifts — All Sites</li>
+              </ul>
+            </div>
+          </div>
+          <div class="app-mock__content">
+            <div class="app-mock__header">
+              <span>AI Dashboard &rsaquo; HVAC — HQ &rsaquo; <strong>Predictive Analysis</strong></span>
+            </div>
+            <div class="app-mock__toolbar">
+              <span class="tab active">Predictions</span>
+              <span class="tab">Anomalies</span>
+              <span class="tab">Sensors</span>
+              <span class="tab">History</span>
+            </div>
+            <div class="app-mock__columns">
+              <div class="app-mock__col">
+                <div class="col-header"><span class="dot dot--red"></span> HIGH RISK <span class="badge">2</span></div>
+                <div class="mock-card">
+                  <strong>Compressor Unit — AHU-03</strong>
+                  <p>Bearing vibration anomaly detected</p>
+                  <div class="mock-tags"><span class="tag tag--red">87% failure risk</span><span class="tag tag--purple">AI</span></div>
+                  <div class="mock-meta">Predicted failure: 5-7 days</div>
+                </div>
+                <div class="mock-card">
+                  <strong>Pump Motor — CHW-01</strong>
+                  <p>Temperature trend exceeding baseline</p>
+                  <div class="mock-tags"><span class="tag tag--red">72% failure risk</span><span class="tag tag--blue">Thermal</span></div>
+                  <div class="mock-meta">Predicted failure: 10-14 days</div>
+                </div>
+              </div>
+              <div class="app-mock__col">
+                <div class="col-header"><span class="dot dot--amber"></span> WATCH <span class="badge">4</span></div>
+                <div class="mock-card">
+                  <strong>Fan Belt — AHU-01</strong>
+                  <p>Slight frequency shift detected</p>
+                  <div class="mock-tags"><span class="tag tag--amber">34% risk</span><span class="tag tag--blue">Vibration</span></div>
+                  <div class="mock-meta">Monitoring &bull; Next check: 48h</div>
+                </div>
+                <div class="mock-card">
+                  <strong>Filter — AHU-02</strong>
+                  <p>Pressure differential increasing</p>
+                  <div class="mock-tags"><span class="tag tag--amber">28% risk</span><span class="tag tag--blue">Airflow</span></div>
+                  <div class="mock-meta">Replace within 2 weeks</div>
+                </div>
+              </div>
+              <div class="app-mock__col">
+                <div class="col-header"><span class="dot dot--green"></span> HEALTHY <span class="badge">38</span></div>
+                <div class="mock-card">
+                  <strong>Chiller — CH-01</strong>
+                  <p>All parameters within normal range</p>
+                  <div class="mock-tags"><span class="tag tag--green">Healthy</span><span class="tag tag--purple">AI Verified</span></div>
+                  <div class="mock-meta">Last checked: 2 min ago</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="showcase__window showcase__inbox">
+        <div class="inbox-mock">
+          <div class="inbox-mock__header">
+            <strong>AI Alerts</strong>
+            <span class="inbox-close">&times;</span>
+          </div>
+          <div class="inbox-mock__tabs">
+            <span class="tab active">All</span>
+            <span class="tab">Critical <span class="notif-badge">2</span></span>
+            <span class="tab">Insights</span>
+          </div>
+          <ul class="inbox-mock__list">
+            <li>
+              <div class="mock-avatar" style="background:#ef4444;"></div>
+              <div><strong>AHU-03 Compressor</strong> — <em>87% failure risk</em><br><small>Just now &bull; AI Prediction</small></div>
+            </li>
+            <li>
+              <div class="mock-avatar" style="background:#ef4444;"></div>
+              <div><strong>CHW-01 Pump Motor</strong> — <em>temperature anomaly</em><br><small>1 hour ago &bull; Sensor Alert</small></div>
+            </li>
+            <li>
+              <div class="mock-avatar" style="background:#f59e0b;"></div>
+              <div><strong>AHU-01 Fan Belt</strong> — moved to <em>watch list</em><br><small>3 hours ago &bull; Pattern Analysis</small></div>
+            </li>
+            <li>
+              <div class="mock-avatar" style="background:#10b981;"></div>
+              <div><strong>Weekly AI Report</strong> ready for review<br><small>Yesterday &bull; 44 systems analysed</small></div>
+            </li>
+            <li>
+              <div class="mock-avatar" style="background:#B8860B;"></div>
+              <div><strong>Model retrained</strong> with latest sensor data<br><small>2 days ago &bull; ML Pipeline</small></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BENTO SHOWCASE SECTION ===== -->
+  <section class="bento" id="productivity">
+    <div class="container">
+      <h2 class="section-title">Intelligence that prevents downtime</h2>
+      <p class="section-subtitle">Axis continuously learns from your equipment data to predict failures before they happen, saving time and money.</p>
+      <ul class="bento__grid">
+        <!-- Card 1 — AI Brain -->
+        <li class="bento__card bento__card--tall">
+          <div class="bento__card-visual bento__card-visual--center">
+            <div style="position: relative; width: 140px; height: 140px;">
+              <svg viewBox="0 0 140 140" width="140" height="140" fill="none">
+                <!-- Neural network visualization -->
+                <circle cx="70" cy="30" r="8" fill="#B8860B" opacity="0.8"/>
+                <circle cx="30" cy="70" r="8" fill="#B8860B" opacity="0.6"/>
+                <circle cx="110" cy="70" r="8" fill="#B8860B" opacity="0.6"/>
+                <circle cx="50" cy="110" r="8" fill="#B8860B" opacity="0.4"/>
+                <circle cx="90" cy="110" r="8" fill="#B8860B" opacity="0.4"/>
+                <circle cx="70" cy="70" r="12" fill="#B8860B" opacity="0.9"/>
+                <!-- Connections -->
+                <line x1="70" y1="30" x2="70" y2="70" stroke="#B8860B" stroke-width="1.5" opacity="0.3"/>
+                <line x1="30" y1="70" x2="70" y2="70" stroke="#B8860B" stroke-width="1.5" opacity="0.3"/>
+                <line x1="110" y1="70" x2="70" y2="70" stroke="#B8860B" stroke-width="1.5" opacity="0.3"/>
+                <line x1="50" y1="110" x2="70" y2="70" stroke="#B8860B" stroke-width="1.5" opacity="0.3"/>
+                <line x1="90" y1="110" x2="70" y2="70" stroke="#B8860B" stroke-width="1.5" opacity="0.3"/>
+                <line x1="70" y1="30" x2="30" y2="70" stroke="#B8860B" stroke-width="1" opacity="0.15"/>
+                <line x1="70" y1="30" x2="110" y2="70" stroke="#B8860B" stroke-width="1" opacity="0.15"/>
+                <line x1="30" y1="70" x2="50" y2="110" stroke="#B8860B" stroke-width="1" opacity="0.15"/>
+                <line x1="110" y1="70" x2="90" y2="110" stroke="#B8860B" stroke-width="1" opacity="0.15"/>
+                <!-- Pulse rings -->
+                <circle cx="70" cy="70" r="20" fill="none" stroke="#B8860B" stroke-width="1" opacity="0.2"/>
+                <circle cx="70" cy="70" r="35" fill="none" stroke="#B8860B" stroke-width="0.5" opacity="0.1"/>
+              </svg>
+            </div>
+          </div>
+          <div class="bento__card-text">
+            <h3><strong>AI Engine.</strong> Machine learning models trained on your equipment data continuously improve fault detection accuracy.</h3>
+          </div>
+        </li>
+
+        <!-- Card 2 — Predictive Analytics -->
+        <li class="bento__card bento__card--tall">
+          <div class="bento__card-visual">
+            <div class="bento__dashboard-mock">
+              <div class="bento__dash-header">
+                <span class="bento__dash-tab active">Predictions</span>
+                <span class="bento__dash-tab">Trends</span>
+              </div>
+              <div class="bento__dash-row">
+                <span class="tag tag--red">87%</span>
+                <div>
+                  <strong>AHU-03 Compressor</strong>
+                  <small>Failure in 5-7 days</small>
+                </div>
+              </div>
+              <div class="bento__dash-row">
+                <span class="tag tag--amber">34%</span>
+                <div>
+                  <strong>AHU-01 Fan Belt</strong>
+                  <small>Monitor for 48 hours</small>
+                </div>
+              </div>
+              <div class="bento__dash-row">
+                <span class="tag tag--green">5%</span>
+                <div>
+                  <strong>CH-01 Chiller</strong>
+                  <small>All systems nominal</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bento__card-text">
+            <h3><strong>Predictive Analytics.</strong> Know exactly when equipment will need attention — schedule maintenance before failures occur.</h3>
+          </div>
+        </li>
+
+        <!-- Card 3 — Sensor Dashboard -->
+        <li class="bento__card bento__card--wide">
+          <div class="bento__card-visual">
+            <div class="bento__timeline-mock">
+              <div class="bento__timeline-event">
+                <div class="bento__timeline-dot"></div>
+                <div class="bento__timeline-content">
+                  <strong>Root Cause Analysis — AHU-03</strong>
+                  <small>Generated by Axis AI</small>
+                  <small>Confidence: 94%</small>
+                  <p>Bearing wear identified as primary cause. Contributing factors: age (7.2 years), load pattern change, insufficient lubrication interval.</p>
+                  <a class="bento__timeline-btn">Generate Work Order</a>
+                  <div class="bento__timeline-meta">
+                    <span>&#128200; 12 data points analysed</span>
+                    <span>&#129302; AI Confidence: 94%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="bento__timeline-card-float">
+                <strong>Recommended Action</strong>
+                <small>Priority: High</small>
+                <p>Schedule bearing replacement within 5 days</p>
+              </div>
+            </div>
+          </div>
+          <div class="bento__card-text">
+            <h3><strong>Root Cause Analysis.</strong> AI automatically identifies the root cause of faults and recommends specific corrective actions.</h3>
+          </div>
+        </li>
+
+        <!-- Card 4 — Smart Alerts -->
+        <li class="bento__card bento__card--glow">
+          <div class="bento__card-visual bento__card-visual--center">
+            <div class="bento__bell-container">
+              <div class="bento__bell-ring bento__bell-ring--1"></div>
+              <div class="bento__bell-ring bento__bell-ring--2"></div>
+              <div class="bento__bell-ring bento__bell-ring--3"></div>
+              <div class="bento__bell-icon">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                  <circle cx="24" cy="24" r="16" stroke="#B8860B" stroke-width="2" fill="#B8860B" opacity="0.1"/>
+                  <circle cx="24" cy="24" r="8" stroke="#B8860B" stroke-width="2" fill="#B8860B" opacity="0.2"/>
+                  <circle cx="24" cy="24" r="3" fill="#B8860B"/>
+                  <path d="M24 6v4M24 38v4M6 24h4M38 24h4" stroke="#B8860B" stroke-width="2" stroke-linecap="round"/>
+                  <circle cx="36" cy="12" r="5" fill="#ef4444"/>
+                  <text x="36" y="15" text-anchor="middle" font-size="7" fill="#fff" font-weight="bold">2</text>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="bento__card-text">
+            <h3><strong>Smart Alerts.</strong> AI-filtered notifications that cut through the noise — only alerting you when human attention is truly needed.</h3>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES SECTION ===== -->
+  <section class="features" id="features">
+    <div class="container">
+      <h2 class="section-title">AI-powered diagnostics for every system</h2>
+      <p class="section-subtitle">Predict. Detect. Prevent. Resolve.</p>
+      <div class="features__grid">
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="14" stroke="#B8860B" stroke-width="2"/><circle cx="20" cy="20" r="6" stroke="#B8860B" stroke-width="2"/><circle cx="20" cy="20" r="2" fill="#B8860B"/></svg>
+          </div>
+          <h3>Predictive Maintenance</h3>
+          <p>ML models analyse sensor data to predict equipment failures days or weeks before they happen.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M8 30l6-8 5 4 6-10 7 6" stroke="#E8922F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 34h28" stroke="#E8922F" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Pattern Recognition</h3>
+          <p>Identify subtle anomalies and trends that human operators would miss — across thousands of data points.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="6" y="6" width="28" height="28" rx="4" stroke="#F59E0B" stroke-width="2" fill="#F59E0B" opacity="0.1"/><path d="M14 20l4 4 8-8" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Automated Diagnostics</h3>
+          <p>Axis runs continuous diagnostic checks and generates detailed fault reports with recommended actions.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M20 6v4M20 30v4M6 20h4M30 20h4" stroke="#10B981" stroke-width="2" stroke-linecap="round"/><circle cx="20" cy="20" r="10" stroke="#10B981" stroke-width="2"/><path d="M20 14v6l4 2" stroke="#10B981" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Continuous Learning</h3>
+          <p>Models retrain on new data automatically — getting smarter and more accurate with every operational cycle.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <h2 class="section-title">Get started in minutes</h2>
+      <p class="section-subtitle">Three steps to AI-powered fault detection.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step__number">1</div>
+          <h3>Connect Your Systems</h3>
+          <p>Integrate Axis with your building management systems, IoT sensors, and equipment controllers.</p>
+        </div>
+        <div class="step__connector"></div>
+        <div class="step">
+          <div class="step__number">2</div>
+          <h3>AI Learns Your Baseline</h3>
+          <p>Axis analyses historical data to establish normal operating patterns for every piece of equipment.</p>
+        </div>
+        <div class="step__connector"></div>
+        <div class="step">
+          <div class="step__number">3</div>
+          <h3>Predict &amp; Prevent</h3>
+          <p>Receive AI-powered predictions, automated diagnostics, and actionable recommendations in real time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA SECTION ===== -->
+  <section class="cta-section">
+    <div class="container cta-section__inner">
+      <h2>Ready for AI-powered fault prevention?</h2>
+      <p>Join engineering teams using Axis to predict failures, reduce downtime, and extend the life of critical equipment.</p>
+      <div class="cta-section__buttons">
+        <a href="#" class="btn btn--primary btn--lg">Start Free Trial <span class="btn__arrow">&rarr;</span></a>
+        <a href="#" class="btn btn--ghost btn--lg">Book a Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="contact">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <div class="navbar__logo">
+          <img src="../assets/Apexiar.png" alt="Apexair" class="navbar__logo-img">
+        </div>
+        <p>Enterprise solutions for facility, site, and operational management.</p>
+      </div>
+      <div class="footer__links">
+        <div class="footer__col">
+          <h4>Eco-System</h4>
+          <a href="artemis.html">Artemis</a>
+          <a href="atlas.html">Atlas</a>
+          <a href="amis.html">AMIS</a>
+          <a href="axis.html">Axis</a>
+          <a href="assure.html">Assure</a>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <a href="#">About</a>
+          <a href="#">Blog</a>
+          <a href="#">Careers</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Security</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>&copy; 2026 Apexair. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

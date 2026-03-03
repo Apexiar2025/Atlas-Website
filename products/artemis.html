@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artemis — Facility Management | Apexair</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a href="../index.html" class="navbar__logo">
+        <img src="../assets/Apexiar.png" alt="Apexair" class="navbar__logo-img">
+      </a>
+
+      <nav class="navbar__links" id="navLinks">
+        <a href="../index.html">Home</a>
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="../index.html#ecosystem">Eco-System</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="navbar__actions">
+        <a href="#" class="btn btn--ghost">Sign In</a>
+        <a href="#" class="btn btn--primary btn--sm">Get Started</a>
+      </div>
+
+      <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== MOBILE NAV OVERLAY ===== -->
+  <div class="mobile-nav" id="mobileNav">
+    <nav class="mobile-nav__links">
+      <a href="../index.html">Home</a>
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="../index.html#ecosystem">Eco-System</a>
+      <a href="#contact">Contact</a>
+      <div class="mobile-nav__actions">
+        <a href="#" class="btn btn--ghost">Sign In</a>
+        <a href="#" class="btn btn--primary">Get Started</a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
+    <div class="hero__vortex">
+      <div class="hero__vortex-core"></div>
+      <div class="hero__vortex-wide"></div>
+      <div class="hero__vortex-flare"></div>
+    </div>
+    <div class="hero__glow"></div>
+    <div class="hero__glow-beam"></div>
+    <div class="hero__glow-beam hero__glow-beam--wide"></div>
+    <div class="hero__particles" id="heroParticles"></div>
+    <div class="hero__gradient-overlay"></div>
+    <div class="container hero__inner">
+      <div class="product-badge">ARTEMIS</div>
+      <h1 class="hero__title">
+        Facility<br>Management,<br>Simplified
+      </h1>
+      <p class="hero__subtitle">
+        Artemis gives you complete control over your buildings, assets, and maintenance operations.
+        From work orders to space planning — manage every facility from a single intelligent dashboard.
+      </p>
+      <a href="#" class="btn btn--primary btn--lg hero__cta">
+        Get Started <span class="btn__arrow">&rarr;</span>
+      </a>
+    </div>
+
+    <!-- Product Showcase -->
+    <div class="showcase">
+      <div class="showcase__window showcase__main">
+        <div class="app-mock">
+          <div class="app-mock__sidebar">
+            <div class="app-mock__sidebar-logo">
+              <div class="mock-avatar mock-avatar--brand"></div>
+              <span>ARTEMIS</span>
+            </div>
+            <div class="app-mock__sidebar-search">
+              <span>&#128269; Search</span>
+            </div>
+            <ul class="app-mock__sidebar-nav">
+              <li class="active">&#127970; Facilities</li>
+              <li>&#128736; Work Orders</li>
+              <li>&#128230; Assets</li>
+              <li>&#128197; Schedules</li>
+              <li>&#128200; Reports</li>
+            </ul>
+            <div class="app-mock__sidebar-section">
+              <small>YOUR BUILDINGS</small>
+              <ul>
+                <li>&#127970; HQ — Birmingham</li>
+                <li>&#127970; Depot — Leeds</li>
+                <li>&#127970; Office — Bristol</li>
+              </ul>
+            </div>
+          </div>
+          <div class="app-mock__content">
+            <div class="app-mock__header">
+              <span>Facilities &rsaquo; HQ — Birmingham &rsaquo; <strong>Overview</strong></span>
+            </div>
+            <div class="app-mock__toolbar">
+              <span class="tab active">Overview</span>
+              <span class="tab">Work Orders</span>
+              <span class="tab">Assets</span>
+              <span class="tab">Maintenance</span>
+            </div>
+            <div class="app-mock__columns">
+              <div class="app-mock__col">
+                <div class="col-header"><span class="dot dot--green"></span> ACTIVE <span class="badge">18</span></div>
+                <div class="mock-card">
+                  <strong>HVAC System — Floor 3</strong>
+                  <p>Scheduled maintenance due</p>
+                  <div class="mock-tags"><span class="tag tag--amber">Due Today</span><span class="tag tag--blue">HVAC</span></div>
+                  <div class="mock-meta">2:00 PM &bull; Tech: M. Harris</div>
+                </div>
+                <div class="mock-card">
+                  <strong>Lift Inspection — West Wing</strong>
+                  <p>Annual compliance check</p>
+                  <div class="mock-tags"><span class="tag tag--green">On Track</span><span class="tag tag--purple">Compliance</span></div>
+                  <div class="mock-meta">Tomorrow &bull; Tech: J. Patel</div>
+                </div>
+              </div>
+              <div class="app-mock__col">
+                <div class="col-header"><span class="dot dot--amber"></span> PENDING <span class="badge">6</span></div>
+                <div class="mock-card">
+                  <strong>Roof Leak — Building B</strong>
+                  <p>Water ingress detected in server room</p>
+                  <div class="mock-tags"><span class="tag tag--red">Urgent</span><span class="tag tag--amber">Repair</span></div>
+                  <div class="mock-meta">Reported 2h ago &bull; Unassigned</div>
+                </div>
+                <div class="mock-card">
+                  <strong>Car Park Lighting</strong>
+                  <p>3 fixtures reported out in Zone D</p>
+                  <div class="mock-tags"><span class="tag tag--amber">Medium</span><span class="tag tag--blue">Electrical</span></div>
+                  <div class="mock-meta">Yesterday &bull; Awaiting parts</div>
+                </div>
+              </div>
+              <div class="app-mock__col">
+                <div class="col-header"><span class="dot dot--blue"></span> COMPLETED <span class="badge">87</span></div>
+                <div class="mock-card">
+                  <strong>Fire Alarm Test — All Zones</strong>
+                  <p>Quarterly compliance test passed</p>
+                  <div class="mock-tags"><span class="tag tag--green">Done</span><span class="tag tag--purple">Safety</span></div>
+                  <div class="mock-meta">Feb 26 &bull; R. Chen</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="showcase__window showcase__inbox">
+        <div class="inbox-mock">
+          <div class="inbox-mock__header">
+            <strong>Activity Feed</strong>
+            <span class="inbox-close">&times;</span>
+          </div>
+          <div class="inbox-mock__tabs">
+            <span class="tab active">All</span>
+            <span class="tab">Alerts <span class="notif-badge">2</span></span>
+            <span class="tab">Work Orders</span>
+          </div>
+          <ul class="inbox-mock__list">
+            <li>
+              <div class="mock-avatar" style="background:#B8860B;"></div>
+              <div><strong>HVAC maintenance</strong> assigned to <em>M. Harris</em><br><small>15 min ago &bull; HQ — Birmingham</small></div>
+            </li>
+            <li>
+              <div class="mock-avatar" style="background:#ef4444;"></div>
+              <div><strong>Roof leak</strong> — priority raised to <em>Urgent</em><br><small>2 hours ago &bull; Building B</small></div>
+            </li>
+            <li>
+              <div class="mock-avatar" style="background:#10b981;"></div>
+              <div><strong>Fire alarm test</strong> completed successfully<br><small>Yesterday &bull; All Zones</small></div>
+            </li>
+            <li>
+              <div class="mock-avatar" style="background:#f59e0b;"></div>
+              <div><strong>Car park lighting</strong> — parts ordered<br><small>Yesterday &bull; Zone D</small></div>
+            </li>
+            <li>
+              <div class="mock-avatar" style="background:#CD7F32;"></div>
+              <div><strong>Asset audit</strong> completed for Floor 2<br><small>2 days ago &bull; HQ</small></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BENTO SHOWCASE SECTION ===== -->
+  <section class="bento" id="productivity">
+    <div class="container">
+      <h2 class="section-title">Complete facility oversight</h2>
+      <p class="section-subtitle">Artemis brings every aspect of facility management into one intelligent platform — from reactive repairs to preventive maintenance.</p>
+      <ul class="bento__grid">
+        <!-- Card 1 — Building Map -->
+        <li class="bento__card bento__card--tall">
+          <div class="bento__card-visual">
+            <div class="bento__dashboard-mock">
+              <div class="bento__dash-header">
+                <span class="bento__dash-tab active">Floor Plan</span>
+                <span class="bento__dash-tab">3D View</span>
+              </div>
+              <div style="padding: 12px; text-align: center;">
+                <svg viewBox="0 0 200 120" width="100%" height="auto" fill="none">
+                  <rect x="10" y="10" width="80" height="50" rx="4" stroke="#B8860B" stroke-width="1.5" fill="#B8860B" opacity="0.08"/>
+                  <text x="50" y="38" text-anchor="middle" fill="#B8860B" font-size="8" font-weight="600">ZONE A</text>
+                  <rect x="100" y="10" width="90" height="50" rx="4" stroke="#B8860B" stroke-width="1.5" fill="#B8860B" opacity="0.05"/>
+                  <text x="145" y="38" text-anchor="middle" fill="#9ca3af" font-size="8" font-weight="600">ZONE B</text>
+                  <rect x="10" y="70" width="120" height="40" rx="4" stroke="#B8860B" stroke-width="1.5" fill="#B8860B" opacity="0.05"/>
+                  <text x="70" y="93" text-anchor="middle" fill="#9ca3af" font-size="8" font-weight="600">ZONE C</text>
+                  <rect x="140" y="70" width="50" height="40" rx="4" stroke="#10b981" stroke-width="1.5" fill="#10b981" opacity="0.1"/>
+                  <text x="165" y="93" text-anchor="middle" fill="#10b981" font-size="7" font-weight="600">SERVER</text>
+                  <circle cx="30" cy="25" r="4" fill="#10b981" opacity="0.8"/><circle cx="30" cy="25" r="7" fill="none" stroke="#10b981" stroke-width="1" opacity="0.3"/>
+                  <circle cx="170" cy="25" r="4" fill="#f59e0b" opacity="0.8"/><circle cx="170" cy="25" r="7" fill="none" stroke="#f59e0b" stroke-width="1" opacity="0.3"/>
+                  <circle cx="155" cy="85" r="4" fill="#ef4444" opacity="0.8"/><circle cx="155" cy="85" r="7" fill="none" stroke="#ef4444" stroke-width="1" opacity="0.3"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="bento__card-text">
+            <h3><strong>Floor Plans.</strong> Interactive building maps show live asset status, sensor data, and work order locations at a glance.</h3>
+          </div>
+        </li>
+
+        <!-- Card 2 — Work Orders -->
+        <li class="bento__card bento__card--tall">
+          <div class="bento__card-visual">
+            <div class="bento__dashboard-mock">
+              <div class="bento__dash-header">
+                <span class="bento__dash-tab active">Active</span>
+                <span class="bento__dash-tab">Scheduled</span>
+              </div>
+              <div class="bento__dash-row">
+                <span class="tag tag--red">Urgent</span>
+                <div>
+                  <strong>Roof leak — Server Room</strong>
+                  <small>Building B &bull; Unassigned</small>
+                </div>
+              </div>
+              <div class="bento__dash-row">
+                <span class="tag tag--amber">Medium</span>
+                <div>
+                  <strong>HVAC filter replacement</strong>
+                  <small>Floor 3 &bull; M. Harris</small>
+                </div>
+              </div>
+              <div class="bento__dash-row">
+                <span class="tag tag--green">Low</span>
+                <div>
+                  <strong>Paint touch-up — Reception</strong>
+                  <small>Ground Floor &bull; Scheduled</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bento__card-text">
+            <h3><strong>Work Orders.</strong> Create, assign, and track maintenance tasks with priority levels, due dates, and real-time status updates.</h3>
+          </div>
+        </li>
+
+        <!-- Card 3 — Maintenance Schedule -->
+        <li class="bento__card bento__card--wide">
+          <div class="bento__card-visual">
+            <div class="bento__timeline-mock">
+              <div class="bento__timeline-event">
+                <div class="bento__timeline-dot"></div>
+                <div class="bento__timeline-content">
+                  <strong>Quarterly HVAC Inspection</strong>
+                  <small>10:00 – 12:00 pm</small>
+                  <small>Every 3 months</small>
+                  <p>Full system check including filters, coils, ductwork, and thermostat calibration.</p>
+                  <a class="bento__timeline-btn">View Details</a>
+                  <div class="bento__timeline-meta">
+                    <span>&#128736; 3 technicians</span>
+                    <span>&#128197; Next: Mar 15</span>
+                  </div>
+                </div>
+              </div>
+              <div class="bento__timeline-card-float">
+                <strong>Lift service inspection</strong>
+                <small>02:00 – 04:00 pm</small>
+                <p>Annual compliance check for all passenger lifts</p>
+              </div>
+            </div>
+          </div>
+          <div class="bento__card-text">
+            <h3><strong>Preventive Maintenance.</strong> Schedule recurring inspections and never miss a compliance deadline again.</h3>
+          </div>
+        </li>
+
+        <!-- Card 4 — Asset Tracking -->
+        <li class="bento__card bento__card--glow">
+          <div class="bento__card-visual bento__card-visual--center">
+            <div class="bento__bell-container">
+              <div class="bento__bell-ring bento__bell-ring--1"></div>
+              <div class="bento__bell-ring bento__bell-ring--2"></div>
+              <div class="bento__bell-ring bento__bell-ring--3"></div>
+              <div class="bento__bell-icon">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                  <rect x="8" y="8" width="32" height="32" rx="6" stroke="#B8860B" stroke-width="2" fill="#B8860B" opacity="0.1"/>
+                  <path d="M16 20h16M16 26h10M16 32h6" stroke="#B8860B" stroke-width="2" stroke-linecap="round"/>
+                  <circle cx="36" cy="12" r="5" fill="#10b981"/>
+                  <text x="36" y="15" text-anchor="middle" font-size="7" fill="#fff" font-weight="bold">&#10003;</text>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="bento__card-text">
+            <h3><strong>Asset Register.</strong> Track every asset's lifecycle — from procurement to decommission — with full maintenance history and cost analysis.</h3>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES SECTION ===== -->
+  <section class="features" id="features">
+    <div class="container">
+      <h2 class="section-title">Everything you need to manage your facilities</h2>
+      <p class="section-subtitle">One platform. Total control. Every building covered.</p>
+      <div class="features__grid">
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="4" stroke="#B8860B" stroke-width="2"/><path d="M4 16h32" stroke="#B8860B" stroke-width="2"/><rect x="8" y="20" width="10" height="6" rx="1" fill="#B8860B" opacity="0.2"/><rect x="22" y="20" width="10" height="6" rx="1" fill="#B8860B" opacity="0.2"/></svg>
+          </div>
+          <h3>Building Management</h3>
+          <p>Organise every building, floor, and zone. Interactive floor plans give you a bird's-eye view of every facility.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M12 8h16v24H12z" stroke="#E8922F" stroke-width="2"/><path d="M8 32h24" stroke="#E8922F" stroke-width="2" stroke-linecap="round"/><circle cx="20" cy="20" r="4" stroke="#E8922F" stroke-width="2"/><path d="M20 16v-2M20 26v-2M16 20h-2M26 20h-2" stroke="#E8922F" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Maintenance Scheduling</h3>
+          <p>Set up recurring maintenance plans, track compliance deadlines, and ensure nothing falls through the cracks.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="6" y="6" width="28" height="28" rx="4" stroke="#F59E0B" stroke-width="2" fill="#F59E0B" opacity="0.1"/><path d="M14 14h12M14 20h12M14 26h8" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Asset Tracking</h3>
+          <p>Full lifecycle management for every asset — warranties, service history, replacement schedules, and cost tracking.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M10 30V18M20 30V10M30 30V22" stroke="#10B981" stroke-width="3" stroke-linecap="round"/><path d="M6 34h28" stroke="#10B981" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Cost Analytics</h3>
+          <p>Understand maintenance spend by building, category, and vendor. Data-driven decisions for budget optimisation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <h2 class="section-title">Get started in minutes</h2>
+      <p class="section-subtitle">Three simple steps to transform your facility management.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step__number">1</div>
+          <h3>Add Your Facilities</h3>
+          <p>Register your buildings, configure floors and zones, and upload floor plans to the Artemis dashboard.</p>
+        </div>
+        <div class="step__connector"></div>
+        <div class="step">
+          <div class="step__number">2</div>
+          <h3>Set Up Maintenance</h3>
+          <p>Create work order templates, set recurring schedules, and assign your maintenance teams.</p>
+        </div>
+        <div class="step__connector"></div>
+        <div class="step">
+          <div class="step__number">3</div>
+          <h3>Monitor &amp; Optimise</h3>
+          <p>Track every work order, monitor asset health, and use analytics to reduce costs and downtime.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA SECTION ===== -->
+  <section class="cta-section">
+    <div class="container cta-section__inner">
+      <h2>Ready to take control of your facilities?</h2>
+      <p>Join operations teams using Artemis to reduce maintenance costs, extend asset life, and keep every facility running smoothly.</p>
+      <div class="cta-section__buttons">
+        <a href="#" class="btn btn--primary btn--lg">Start Free Trial <span class="btn__arrow">&rarr;</span></a>
+        <a href="#" class="btn btn--ghost btn--lg">Book a Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="contact">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <div class="navbar__logo">
+          <img src="../assets/Apexiar.png" alt="Apexair" class="navbar__logo-img">
+        </div>
+        <p>Enterprise solutions for facility, site, and operational management.</p>
+      </div>
+      <div class="footer__links">
+        <div class="footer__col">
+          <h4>Eco-System</h4>
+          <a href="artemis.html">Artemis</a>
+          <a href="atlas.html">Atlas</a>
+          <a href="amis.html">AMIS</a>
+          <a href="axis.html">Axis</a>
+          <a href="assure.html">Assure</a>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <a href="#">About</a>
+          <a href="#">Blog</a>
+          <a href="#">Careers</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Security</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>&copy; 2026 Apexair. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
