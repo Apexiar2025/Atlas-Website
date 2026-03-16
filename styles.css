@@ -100,7 +100,7 @@ img { max-width: 100%; }
   color: var(--text-muted);
   font-size: 1.05rem;
   margin-bottom: 3rem;
-  max-width: 540px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
 }
