@@ -1,5 +1,5 @@
 /* ============================================
-   APEXAIR — Shared Site Scripts
+   APEXIAR — Shared Site Scripts
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
