@@ -3,13 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Axis — AI Fault Finding | Apexair</title>
+  <title>Axis — AI Fault Finding | Apexiar</title>
+  <meta name="description" content="Axis by Apexiar — AI-powered fault finding, predictive analytics, and automated diagnostics for enterprise operations.">
+  <meta name="theme-color" content="#0a0a0f">
+  <link rel="canonical" href="https://apexiar.co.uk/products/axis.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://apexiar.co.uk/products/axis.html">
+  <meta property="og:title" content="Axis — AI Fault Finding | Apexiar">
+  <meta property="og:description" content="AI-powered diagnostics that detect, predict, and resolve faults before they escalate. Smart pattern recognition and root cause analysis.">
+  <meta property="og:image" content="https://apexiar.co.uk/assets/Apexiar.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Axis — AI Fault Finding | Apexiar">
+  <meta name="twitter:description" content="AI-powered diagnostics that detect, predict, and resolve faults before they escalate. Smart pattern recognition and root cause analysis.">
+  <meta name="twitter:image" content="https://apexiar.co.uk/assets/Apexiar.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../assets/Apexiar.png">
+  <link rel="apple-touch-icon" href="../assets/Apexiar.png">
+
   <link rel="stylesheet" href="../styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
 
   <!-- ===== NAVIGATION ===== -->
   <header class="navbar">
@@ -31,14 +53,14 @@
         <a href="#" class="btn btn--primary btn--sm">Get Started</a>
       </div>
 
-      <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu">
+      <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileNav">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
   <!-- ===== MOBILE NAV OVERLAY ===== -->
-  <div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Mobile navigation" aria-hidden="true">
     <nav class="mobile-nav__links">
       <a href="../index.html">Home</a>
       <a href="#features">Features</a>
@@ -51,6 +73,8 @@
       </div>
     </nav>
   </div>
+
+  <main id="main-content">
 
   <!-- ===== HERO SECTION ===== -->
   <section class="hero">
@@ -174,23 +198,23 @@
           </div>
           <ul class="inbox-mock__list">
             <li>
-              <div class="mock-avatar" style="background:#ef4444;"></div>
+              <div class="mock-avatar mock-avatar--red"></div>
               <div><strong>AHU-03 Compressor</strong> — <em>87% failure risk</em><br><small>Just now &bull; AI Prediction</small></div>
             </li>
             <li>
-              <div class="mock-avatar" style="background:#ef4444;"></div>
+              <div class="mock-avatar mock-avatar--red"></div>
               <div><strong>CHW-01 Pump Motor</strong> — <em>temperature anomaly</em><br><small>1 hour ago &bull; Sensor Alert</small></div>
             </li>
             <li>
-              <div class="mock-avatar" style="background:#f59e0b;"></div>
+              <div class="mock-avatar mock-avatar--amber"></div>
               <div><strong>AHU-01 Fan Belt</strong> — moved to <em>watch list</em><br><small>3 hours ago &bull; Pattern Analysis</small></div>
             </li>
             <li>
-              <div class="mock-avatar" style="background:#10b981;"></div>
+              <div class="mock-avatar mock-avatar--green"></div>
               <div><strong>Weekly AI Report</strong> ready for review<br><small>Yesterday &bull; 44 systems analysed</small></div>
             </li>
             <li>
-              <div class="mock-avatar" style="background:#B8860B;"></div>
+              <div class="mock-avatar mock-avatar--gold"></div>
               <div><strong>Model retrained</strong> with latest sensor data<br><small>2 days ago &bull; ML Pipeline</small></div>
             </li>
           </ul>
@@ -208,7 +232,7 @@
         <!-- Card 1 — AI Brain -->
         <li class="bento__card bento__card--tall">
           <div class="bento__card-visual bento__card-visual--center">
-            <div style="position: relative; width: 140px; height: 140px;">
+            <div class="bento__gauge-container">
               <svg viewBox="0 0 140 140" width="140" height="140" fill="none">
                 <!-- Neural network visualization -->
                 <circle cx="70" cy="30" r="8" fill="#B8860B" opacity="0.8"/>
@@ -407,6 +431,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer" id="contact">

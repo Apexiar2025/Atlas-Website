@@ -9,9 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (hamburger && mobileNav) {
     hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
+      const isActive = hamburger.classList.toggle('active');
       mobileNav.classList.toggle('active');
-      document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+      hamburger.setAttribute('aria-expanded', isActive);
+      mobileNav.setAttribute('aria-hidden', !isActive);
+      document.body.style.overflow = isActive ? 'hidden' : '';
     });
 
     // Close mobile nav when a link is clicked
@@ -19,6 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
       link.addEventListener('click', () => {
         hamburger.classList.remove('active');
         mobileNav.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        mobileNav.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
       });
     });
@@ -82,6 +86,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   animateElements();
 
+  // --- Mark decorative SVGs as aria-hidden ---
+  document.querySelectorAll('.feature-card__icon svg, .ecosystem__card-icon svg, .bento__bell-icon svg').forEach(svg => {
+    svg.setAttribute('aria-hidden', 'true');
+  });
+
   // --- Stagger animation for feature cards ---
   const featureCards = document.querySelectorAll('.feature-card');
   featureCards.forEach((card, i) => {
@@ -138,92 +147,105 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   }
 
-  // --- Floating Particles ---
-  const particleContainer = document.getElementById('heroParticles');
-  if (particleContainer) {
+  // --- Reusable Particle System ---
+  const createParticleSystem = (container, options = {}) => {
+    if (!container) return;
+
+    const {
+      maxParticles = 60,
+      spawnInterval = [80, 200],  // [min, range] ms
+      initialBurst = 40,
+      burstDelay = 60,
+      sizeRange = [1.5, 4],
+      durationRange = [5, 7],
+      delayRange = [0, 1.5],
+      bottomRange = [0, 50],
+      colors = ['#F5C242', '#B8860B', '#CD7F32', '#E8922F', '#FFD666', '#FBBF24']
+    } = options;
+
+    let activeParticles = 0;
+    let spawnTimer = null;
+    let paused = false;
+
     const createParticle = () => {
+      if (paused || activeParticles >= maxParticles) return;
+
       const particle = document.createElement('div');
       particle.classList.add('particle');
 
-      // Random position — full width of the hero
-      const x = Math.random() * 100;
-      particle.style.left = x + '%';
-      particle.style.bottom = Math.random() * 50 + '%';
+      particle.style.left = Math.random() * 100 + '%';
+      particle.style.bottom = Math.random() * bottomRange[1] + bottomRange[0] + '%';
 
-      // Random size — larger particles for more prominence
-      const size = Math.random() * 4 + 1.5;
+      const size = Math.random() * sizeRange[1] + sizeRange[0];
       particle.style.width = size + 'px';
       particle.style.height = size + 'px';
 
-      // Random duration and delay
-      const duration = Math.random() * 7 + 5;
+      const duration = Math.random() * durationRange[1] + durationRange[0];
       particle.style.animationDuration = duration + 's';
-      particle.style.animationDelay = Math.random() * 1.5 + 's';
+      particle.style.animationDelay = Math.random() * delayRange[1] + delayRange[0] + 's';
 
-      // Random color from gold palette
-      const colors = ['#F5C242', '#B8860B', '#CD7F32', '#E8922F', '#FFD666', '#FBBF24'];
-      particle.style.background = colors[Math.floor(Math.random() * colors.length)];
-      particle.style.boxShadow = `0 0 ${size * 3}px ${particle.style.background}`;
+      const color = colors[Math.floor(Math.random() * colors.length)];
+      particle.style.background = color;
+      particle.style.boxShadow = `0 0 ${size * 3}px ${color}`;
 
-      particleContainer.appendChild(particle);
+      container.appendChild(particle);
+      activeParticles++;
 
-      // Cleanup after animation
       setTimeout(() => {
         particle.remove();
-      }, (duration + 2) * 1000);
+        activeParticles--;
+      }, (duration + delayRange[1] + 1) * 1000);
     };
 
-    // Spawn particles continuously — faster rate for more density
-    const spawnParticles = () => {
+    const spawnLoop = () => {
       createParticle();
-      setTimeout(spawnParticles, Math.random() * 200 + 80);
+      spawnTimer = setTimeout(spawnLoop, Math.random() * spawnInterval[1] + spawnInterval[0]);
     };
-    spawnParticles();
 
-    // Initial burst — more particles for immediate impact
-    for (let i = 0; i < 40; i++) {
-      setTimeout(createParticle, i * 60);
+    // Pause when container is off-screen
+    const visibilityObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        paused = !entry.isIntersecting;
+        if (!paused && !spawnTimer) spawnLoop();
+        if (paused && spawnTimer) {
+          clearTimeout(spawnTimer);
+          spawnTimer = null;
+        }
+      });
+    }, { threshold: 0 });
+
+    visibilityObserver.observe(container.parentElement || container);
+
+    // Start
+    spawnLoop();
+
+    // Initial burst
+    for (let i = 0; i < initialBurst; i++) {
+      setTimeout(createParticle, i * burstDelay);
     }
-  }
+  };
 
-  // --- Floating Particles for Showcase Bento ---
-  const bentoParticleContainer = document.getElementById('bentoParticles');
-  if (bentoParticleContainer) {
-    const createBentoParticle = () => {
-      const particle = document.createElement('div');
-      particle.classList.add('particle');
+  // --- Hero Particles ---
+  createParticleSystem(document.getElementById('heroParticles'), {
+    maxParticles: 60,
+    spawnInterval: [80, 200],
+    initialBurst: 40,
+    burstDelay: 60,
+    sizeRange: [1.5, 4],
+    durationRange: [5, 7],
+    bottomRange: [0, 50]
+  });
 
-      const x = Math.random() * 100;
-      particle.style.left = x + '%';
-      particle.style.bottom = Math.random() * 30 + '%';
-
-      const size = Math.random() * 3.5 + 1;
-      particle.style.width = size + 'px';
-      particle.style.height = size + 'px';
-
-      const duration = Math.random() * 8 + 6;
-      particle.style.animationDuration = duration + 's';
-      particle.style.animationDelay = Math.random() * 2 + 's';
-
-      const colors = ['#F5C242', '#B8860B', '#CD7F32', '#E8922F', '#FFD666'];
-      particle.style.background = colors[Math.floor(Math.random() * colors.length)];
-      particle.style.boxShadow = `0 0 ${size * 3}px ${particle.style.background}`;
-
-      bentoParticleContainer.appendChild(particle);
-
-      setTimeout(() => {
-        particle.remove();
-      }, (duration + 2) * 1000);
-    };
-
-    const spawnBentoParticles = () => {
-      createBentoParticle();
-      setTimeout(spawnBentoParticles, Math.random() * 350 + 150);
-    };
-    spawnBentoParticles();
-
-    for (let i = 0; i < 15; i++) {
-      setTimeout(createBentoParticle, i * 120);
-    }
-  }
+  // --- Bento Showcase Particles ---
+  createParticleSystem(document.getElementById('bentoParticles'), {
+    maxParticles: 30,
+    spawnInterval: [150, 350],
+    initialBurst: 15,
+    burstDelay: 120,
+    sizeRange: [1, 3.5],
+    durationRange: [6, 8],
+    delayRange: [0, 2],
+    bottomRange: [0, 30],
+    colors: ['#F5C242', '#B8860B', '#CD7F32', '#E8922F', '#FFD666']
+  });
 });

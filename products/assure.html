@@ -3,13 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Assure — Operational Assurance | Apexair</title>
+  <title>Assure — Operational Assurance | Apexiar</title>
+  <meta name="description" content="Assure by Apexiar — compliance management, risk assessments, quality control, and certification tracking for enterprise operations.">
+  <meta name="theme-color" content="#0a0a0f">
+  <link rel="canonical" href="https://apexiar.co.uk/products/assure.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://apexiar.co.uk/products/assure.html">
+  <meta property="og:title" content="Assure — Operational Assurance | Apexiar">
+  <meta property="og:description" content="Compliance management, risk assessments, quality control, and certification tracking — stay audit-ready at all times.">
+  <meta property="og:image" content="https://apexiar.co.uk/assets/Apexiar.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Assure — Operational Assurance | Apexiar">
+  <meta name="twitter:description" content="Compliance management, risk assessments, quality control, and certification tracking — stay audit-ready at all times.">
+  <meta name="twitter:image" content="https://apexiar.co.uk/assets/Apexiar.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../assets/Apexiar.png">
+  <link rel="apple-touch-icon" href="../assets/Apexiar.png">
+
   <link rel="stylesheet" href="../styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
 
   <!-- ===== NAVIGATION ===== -->
   <header class="navbar">
@@ -31,14 +53,14 @@
         <a href="#" class="btn btn--primary btn--sm">Get Started</a>
       </div>
 
-      <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu">
+      <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileNav">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
   <!-- ===== MOBILE NAV OVERLAY ===== -->
-  <div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Mobile navigation" aria-hidden="true">
     <nav class="mobile-nav__links">
       <a href="../index.html">Home</a>
       <a href="#features">Features</a>
@@ -51,6 +73,8 @@
       </div>
     </nav>
   </div>
+
+  <main id="main-content">
 
   <!-- ===== HERO SECTION ===== -->
   <section class="hero">
@@ -174,23 +198,23 @@
           </div>
           <ul class="inbox-mock__list">
             <li>
-              <div class="mock-avatar" style="background:#f59e0b;"></div>
+              <div class="mock-avatar mock-avatar--amber"></div>
               <div><strong>Training overdue</strong> — 3 staff in <em>Zone C</em><br><small>Today &bull; HR notified</small></div>
             </li>
             <li>
-              <div class="mock-avatar" style="background:#B8860B;"></div>
+              <div class="mock-avatar mock-avatar--gold"></div>
               <div><strong>Fire risk assessment</strong> due for <em>Depot</em><br><small>In 12 days &bull; Scheduled</small></div>
             </li>
             <li>
-              <div class="mock-avatar" style="background:#CD7F32;"></div>
+              <div class="mock-avatar mock-avatar--copper"></div>
               <div><strong>ISO 45001 audit</strong> preparation checklist ready<br><small>In 17 days &bull; BSI Visit</small></div>
             </li>
             <li>
-              <div class="mock-avatar" style="background:#10b981;"></div>
+              <div class="mock-avatar mock-avatar--green"></div>
               <div><strong>Emergency procedures</strong> audit <em>passed</em><br><small>Yesterday &bull; All sites</small></div>
             </li>
             <li>
-              <div class="mock-avatar" style="background:#10b981;"></div>
+              <div class="mock-avatar mock-avatar--green"></div>
               <div><strong>Risk registers</strong> review <em>completed</em><br><small>3 days ago &bull; A. Smith</small></div>
             </li>
           </ul>
@@ -213,7 +237,7 @@
                 <span class="bento__dash-tab active">Risk Matrix</span>
                 <span class="bento__dash-tab">Heat Map</span>
               </div>
-              <div style="padding: 8px;">
+              <div class="bento__phone-screen--padded">
                 <svg viewBox="0 0 200 120" width="100%" height="auto" fill="none">
                   <!-- Risk matrix grid -->
                   <rect x="40" y="0" width="40" height="30" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="0.5"/>
@@ -424,6 +448,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer" id="contact">

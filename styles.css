@@ -10,6 +10,26 @@
   box-sizing: border-box;
 }
 
+/* --- Skip Navigation (accessibility) --- */
+.skip-nav {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 9999;
+  background: var(--accent);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.88rem;
+  text-decoration: none;
+  transition: top 0.2s;
+}
+
+.skip-nav:focus {
+  top: 0;
+}
+
 :root {
   --bg: #0a0a0f;
   --bg-card: #12121a;
@@ -19,15 +39,15 @@
   --text-heading: #ffffff;
   --accent: #B8860B;
   --accent-light: #D4A24C;
-  --cyan: #E8922F;
+  --orange: #E8922F;
   --gold-deep: #8B6914;
   --gold-bright: #F5C242;
   --gold-copper: #CD7F32;
   --green: #10b981;
   --amber: #f59e0b;
   --red: #ef4444;
-  --purple: #B8860B;
-  --blue: #CD7F32;
+  --gold-dark: #B8860B;
+  --copper: #CD7F32;
   --border: rgba(255,255,255,0.08);
   --radius: 12px;
   --radius-sm: 8px;
@@ -821,7 +841,54 @@ img { max-width: 100%; }
 }
 
 .mock-avatar--brand {
-  background: linear-gradient(135deg, var(--accent), var(--cyan));
+  background: linear-gradient(135deg, var(--accent), var(--orange));
+}
+
+.mock-avatar--red    { background: var(--red); }
+.mock-avatar--amber  { background: var(--amber); }
+.mock-avatar--green  { background: var(--green); }
+.mock-avatar--gold   { background: var(--accent); }
+.mock-avatar--copper { background: var(--gold-copper); }
+
+/* --- Bento Phone Mock Form --- */
+.bento__phone-screen--padded { padding: 8px; }
+.bento__phone-content-centered { padding: 12px; text-align: center; }
+
+.bento__report-wrapper {
+  width: 100%;
+  text-align: left;
+}
+
+.bento__report-title {
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.bento__report-field {
+  background: rgba(255,255,255,0.08);
+  border-radius: 6px;
+  padding: 5px 8px;
+  margin-bottom: 4px;
+  font-size: 0.55rem;
+  color: var(--text-muted);
+}
+
+.bento__report-action {
+  background: rgba(239,68,68,0.2);
+  border-radius: 6px;
+  padding: 5px 8px;
+  font-size: 0.55rem;
+  color: var(--red);
+  text-align: center;
+  font-weight: 600;
+}
+
+.bento__gauge-container {
+  position: relative;
+  width: 140px;
+  height: 140px;
 }
 
 .app-mock__sidebar-search {
@@ -958,7 +1025,7 @@ img { max-width: 100%; }
 
 .dot--green { background: var(--green); }
 .dot--amber { background: var(--amber); }
-.dot--blue  { background: var(--blue); }
+.dot--blue  { background: var(--copper); }
 
 .badge {
   background: var(--bg-elevated);
@@ -1004,10 +1071,10 @@ img { max-width: 100%; }
 }
 
 .tag--green  { background: rgba(16,185,129,0.15); color: var(--green); }
-.tag--blue   { background: rgba(59,130,246,0.15); color: var(--blue); }
+.tag--blue   { background: rgba(59,130,246,0.15); color: var(--copper); }
 .tag--amber  { background: rgba(245,158,11,0.15); color: var(--amber); }
 .tag--red    { background: rgba(239,68,68,0.15);  color: var(--red); }
-.tag--purple { background: rgba(139,92,246,0.15); color: var(--purple); }
+.tag--purple { background: rgba(139,92,246,0.15); color: var(--gold-dark); }
 
 .mock-meta {
   font-size: 0.6rem;
@@ -1224,8 +1291,8 @@ img { max-width: 100%; }
   left: 10%;
   right: 10%;
   height: 2px;
-  background: linear-gradient(90deg, transparent, var(--cyan), transparent);
-  box-shadow: 0 0 12px var(--cyan);
+  background: linear-gradient(90deg, transparent, var(--orange), transparent);
+  box-shadow: 0 0 12px var(--orange);
   animation: scanLine 4s ease-in-out infinite;
 }
 
@@ -1970,9 +2037,6 @@ img { max-width: 100%; }
 
 /* Make last card (5th) span center on large screens */
 @media (min-width: 960px) {
-  .ecosystem__grid .ecosystem__card:last-child:nth-child(3n+1) {
-    /* If last card is alone in its row, don't center — it should just be left */
-  }
   .ecosystem__grid .ecosystem__card:nth-child(4) {
     grid-column: 1 / 2;
   }
