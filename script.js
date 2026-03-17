@@ -132,6 +132,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // --- Video reel text slide sync ---
+  const reelVideo = document.querySelector('.video-reel__bg');
+  const reelSlides = document.querySelectorAll('.video-reel__slide');
+
+  if (reelVideo && reelSlides.length > 0) {
+    // [start, end] in seconds for each slide
+    const slideRanges = [[0.5, 5], [6, 11.5], [12, 17.5]];
+    let currentSlide = -1;
+
+    reelVideo.addEventListener('timeupdate', () => {
+      const t = reelVideo.currentTime;
+      let activeSlide = -1;
+
+      for (let i = 0; i < slideRanges.length; i++) {
+        if (t >= slideRanges[i][0] && t <= slideRanges[i][1]) {
+          activeSlide = i;
+          break;
+        }
+      }
+
+      if (activeSlide !== currentSlide) {
+        reelSlides.forEach(s => s.classList.remove('video-reel__slide--active'));
+        if (activeSlide >= 0) {
+          reelSlides[activeSlide].classList.add('video-reel__slide--active');
+        }
+        currentSlide = activeSlide;
+      }
+    });
+  }
+
   // --- Subtle parallax on hero glow ---
   const heroGlow = document.querySelector('.hero__glow');
   const heroVortex = document.querySelector('.hero__vortex');
