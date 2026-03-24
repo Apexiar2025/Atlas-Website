@@ -278,4 +278,19 @@ document.addEventListener('DOMContentLoaded', () => {
     bottomRange: [0, 30],
     colors: ['#F5C242', '#B8860B', '#CD7F32', '#E8922F', '#FFD666']
   });
+
+  // --- Cursor-following glow on .glow-track elements ---
+  document.querySelectorAll('.glow-track').forEach(el => {
+    const light = document.createElement('div');
+    light.className = 'glow-track__light';
+    el.appendChild(light);
+
+    el.addEventListener('mousemove', e => {
+      const rect = el.getBoundingClientRect();
+      const x = e.clientX - rect.left - 60;
+      const y = e.clientY - rect.top - 60;
+      light.style.left = x + 'px';
+      light.style.top = y + 'px';
+    });
+  });
 });
