@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>From Telemetry to Intelligence: Building a Reliability-Centred Maintenance Platform — Apexiar Blog</title>
+  <meta name="description" content="Apexiar has been commissioned to build a bespoke telemetry ingestion and analysis platform for a major UK rail operator — integrating real-time train data with Axis to drive reliability, availability, and revenue.">
+  <meta name="theme-color" content="#0a0a0f">
+  <link rel="canonical" href="https://apexiar.co.uk/blog/telemetry-reliability-centred-maintenance.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://apexiar.co.uk/blog/telemetry-reliability-centred-maintenance.html">
+  <meta property="og:title" content="From Telemetry to Intelligence: Building a Reliability-Centred Maintenance Platform">
+  <meta property="og:description" content="Apexiar has been commissioned to build a bespoke telemetry ingestion and analysis platform for a major UK rail operator.">
+  <meta property="og:image" content="https://apexiar.co.uk/assets/RCM.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="From Telemetry to Intelligence: Building a Reliability-Centred Maintenance Platform">
+  <meta name="twitter:description" content="Apexiar has been commissioned to build a bespoke telemetry ingestion and analysis platform for a major UK rail operator.">
+  <meta name="twitter:image" content="https://apexiar.co.uk/assets/RCM.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../assets/Apexiar.png">
+  <link rel="apple-touch-icon" href="../assets/Apexiar.png">
+
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a href="../index.html" class="navbar__logo">
+        <img src="../assets/Apexiar.png" alt="Apexiar" class="navbar__logo-img">
+      </a>
+
+      <nav class="navbar__links" id="navLinks">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#ecosystem">Eco-System</a>
+        <a href="../services.html">Services</a>
+        <a href="../blog.html">Blog</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+
+      <div class="navbar__actions">
+        <a href="https://www.linkedin.com/company/110718248/" target="_blank" rel="noopener noreferrer" class="navbar__social-link"><img src="../assets/LinkedIn.jpg" alt="LinkedIn" class="navbar__social-icon"></a>
+        <a href="../contact.html" class="btn btn--primary btn--sm">Get Started</a>
+      </div>
+
+      <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== MOBILE NAV OVERLAY ===== -->
+  <div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Mobile navigation" aria-hidden="true">
+    <nav class="mobile-nav__links">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#ecosystem">Eco-System</a>
+      <a href="../services.html">Services</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../contact.html">Contact</a>
+      <div class="mobile-nav__actions">
+        <a href="../contact.html" class="btn btn--primary">Get Started</a>
+      </div>
+    </nav>
+  </div>
+
+  <main id="main-content">
+
+  <!-- ===== ARTICLE HERO ===== -->
+  <section class="blog-article-hero">
+    <div class="container">
+      <div class="blog-article-meta">
+        <span class="blog-card__tag">Engineering</span>
+        <span class="blog-card__date">28 March 2026</span>
+      </div>
+      <h1>From Telemetry to Intelligence: Building a Reliability-Centred Maintenance Platform</h1>
+      <p class="blog-article-intro">We've been commissioned by a major UK rail operator to design and build a bespoke platform that ingests live train telemetry, transforms it into actionable intelligence, and integrates directly with their existing Axis deployment.</p>
+    </div>
+  </section>
+
+  <!-- ===== ARTICLE IMAGE ===== -->
+  <section class="blog-article-image">
+    <div class="container">
+      <img src="../assets/RCM.jpg" alt="Reliability-centred maintenance — telemetry data and train systems analysis">
+    </div>
+  </section>
+
+  <!-- ===== ARTICLE BODY ===== -->
+  <section class="blog-article-body">
+    <div class="container">
+      <div class="blog-article-content">
+
+        <p>Every now and then, a project comes along that pushes the boundaries of what we've built before. This is one of those projects.</p>
+
+        <p>A major UK rail operator — already using <a href="../products/axis.html">Axis</a> across their operations — has approached us with an ambitious brief: take raw telemetry data streaming from their train fleet, build a purpose-designed application to ingest, process, and visualise that data, and create an intelligent rules and alerting engine on top of it. The end goal? Fundamentally improve fleet reliability, maximise availability, and drive revenue.</p>
+
+        <h2>The Challenge</h2>
+
+        <p>Modern rolling stock generates vast quantities of telemetry data — from engine performance metrics and braking system diagnostics to door cycle counts, HVAC status, and traction power readings. The data exists, but turning it into something operationally useful is an entirely different problem.</p>
+
+        <p>The operator's challenge was multi-faceted:</p>
+
+        <ul>
+          <li><strong>Data volume and complexity</strong> — thousands of data points per vehicle, streaming continuously, across an entire fleet</li>
+          <li><strong>No single view</strong> — telemetry data was siloed, making it difficult to correlate faults across systems or identify emerging patterns</li>
+          <li><strong>Reactive maintenance culture</strong> — without predictive insight, maintenance was driven by failure events rather than condition-based intelligence</li>
+          <li><strong>Integration requirement</strong> — the solution had to work alongside their existing Axis platform, not replace it</li>
+        </ul>
+
+        <p>This isn't a problem you solve with a dashboard. It requires a purpose-built platform with the engineering depth to handle real-time data ingestion, the analytical capability to surface meaningful patterns, and the operational design to put intelligence into the hands of the people who need it.</p>
+
+        <h2>What We're Building</h2>
+
+        <p>The platform we're developing sits at the intersection of data engineering, operational technology, and user experience. At its core, it does three things:</p>
+
+        <h3>1. Telemetry Ingestion and Processing</h3>
+
+        <p>Raw telemetry data from the fleet is ingested in near real-time, normalised, and stored in a structure optimised for both live monitoring and historical analysis. The architecture is designed to scale — as the fleet grows or new data sources come online, the platform absorbs them without rearchitecting.</p>
+
+        <h3>2. Rules, Alerts, and Condition Monitoring</h3>
+
+        <p>The operator can define custom rules against any telemetry parameter — threshold breaches, rate-of-change triggers, pattern-based anomalies, and cross-system correlations. When a rule fires, the platform generates alerts routed to the right teams, at the right time, with the right context.</p>
+
+        <p>This is where the shift from reactive to predictive begins. Instead of waiting for a failure, teams are notified when a system is trending toward one — giving them the window to intervene before it impacts service.</p>
+
+        <h3>3. Axis Integration</h3>
+
+        <p>The operator already relies on Axis for workforce and operational management. Rather than creating another isolated system, the telemetry platform integrates directly — feeding condition-based intelligence into existing workflows, scheduling, and resource planning.</p>
+
+        <p>When the telemetry platform identifies a maintenance need, Axis can factor that into crew allocation, depot scheduling, and operational planning. Two systems, one operational picture.</p>
+
+        <h2>A Multi-Discipline Effort</h2>
+
+        <p>Projects of this complexity don't happen in a silo. This engagement requires coordinated input from multiple business functions — rolling stock engineering, data architecture, operations, IT security, and front-line maintenance teams. Each brings a different perspective on what the platform needs to do, and each shapes the design in meaningful ways.</p>
+
+        <p>Our approach has been collaborative from day one. We're working directly with the operator's engineering and data teams to ensure the platform is built around their reality — not our assumptions. Every decision, from the data model to the alert routing logic, is validated against real operational scenarios.</p>
+
+        <h2>The Business Case: Reliability, Availability, Revenue</h2>
+
+        <p>The strategic drivers behind this project are clear:</p>
+
+        <p><strong>Reliability</strong> — by moving from time-based to condition-based maintenance, faults are caught earlier, interventions are more targeted, and the overall reliability of the fleet improves. Fewer in-service failures means fewer delays and cancellations.</p>
+
+        <p><strong>Availability</strong> — when maintenance is driven by intelligence rather than fixed schedules, vehicles spend less time in depots and more time in service. Optimised maintenance windows mean higher fleet availability without compromising safety.</p>
+
+        <p><strong>Revenue</strong> — a more reliable, more available fleet directly translates to better service performance, fewer penalty events, and increased passenger confidence. The commercial impact of even marginal improvements in availability is significant at fleet scale.</p>
+
+        <h2>Why This Matters to Us</h2>
+
+        <p>This project represents a natural evolution of what Apexiar does. We've always built platforms for complex, regulated environments — but this engagement takes us deeper into the data engineering space, working with real-time telemetry at a scale that demands precision, resilience, and operational rigour.</p>
+
+        <p>It also validates the ecosystem approach we've taken. The fact that a customer already running Axis wants to extend their Apexiar footprint — and integrate a new, bespoke platform into their existing deployment — is exactly the kind of interoperability we designed our products to support.</p>
+
+        <h2>What's Next</h2>
+
+        <p>We're currently deep in the design and build phase. We'll share more about the platform's capabilities, architecture, and early results as the project progresses.</p>
+
+        <p>If you're operating in a data-intensive environment and need a platform built around your specific operational challenges, <a href="../contact.html">we'd like to hear from you</a>.</p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BACK TO BLOG ===== -->
+  <section class="blog-article-back">
+    <div class="container">
+      <a href="../blog.html" class="btn btn--outline btn--sm">&larr; Back to Blog</a>
+    </div>
+  </section>
+
+  <!-- ===== CTA SECTION ===== -->
+  <section class="cta-section">
+    <div class="container cta-section__inner">
+      <h2>Have a complex operational challenge?</h2>
+      <p>We build bespoke platforms for regulated industries. Let's talk about what you need.</p>
+      <div class="cta-section__buttons">
+        <a href="../contact.html" class="btn btn--primary btn--lg">Contact Us <span class="btn__arrow">&rarr;</span></a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <div class="navbar__logo">
+          <img src="../assets/Apexiar.png" alt="Apexiar" class="footer__logo-img">
+        </div>
+        <p>Enterprise solutions for asset management, site, and operational management. Built for automation, compliance, and security first.</p>
+      </div>
+      <div class="footer__links">
+        <div class="footer__col">
+          <h4>Eco-System</h4>
+          <a href="../products/artemis.html">Artemis</a>
+          <a href="../products/atlas.html">Atlas</a>
+          <a href="../products/amis.html">AMIS</a>
+          <a href="../products/axis.html">Axis</a>
+          <a href="../products/assure.html">Assure</a>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <a href="../index.html#about">About</a>
+          <a href="../blog.html">Blog</a>
+          <a href="../services.html">Services</a>
+          <a href="../contact.html">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <a href="../privacy.html">Privacy</a>
+          <a href="../cookies.html">Cookies</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>&copy; 2026 Apexiar. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
