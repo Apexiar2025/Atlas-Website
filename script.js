@@ -36,9 +36,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollY = window.scrollY;
 
     if (scrollY > 50) {
-      navbar.style.background = 'rgba(10,10,15,0.95)';
+      navbar.style.background = 'rgba(10,10,15,0.85)';
+      navbar.style.backdropFilter = 'blur(12px)';
+      navbar.style.webkitBackdropFilter = 'blur(12px)';
     } else {
-      navbar.style.background = 'rgba(10,10,15,0.8)';
+      navbar.style.background = 'transparent';
+      navbar.style.backdropFilter = 'none';
+      navbar.style.webkitBackdropFilter = 'none';
     }
 
     lastScroll = scrollY;
