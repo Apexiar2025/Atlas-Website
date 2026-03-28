@@ -266,6 +266,18 @@ img { max-width: 100%; }
   opacity: 0.8;
 }
 
+.navbar__badge {
+  height: 26px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+
+.navbar__badge:hover {
+  opacity: 1;
+}
+
 /* Hamburger */
 .navbar__hamburger {
   display: flex;
@@ -2108,6 +2120,43 @@ img { max-width: 100%; }
     flex-direction: row;
     justify-content: center;
   }
+}
+
+/* Trust Strip */
+.hero__trust-strip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.hero__trust-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.4);
+}
+
+.hero__trust-badges {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hero__trust-badge {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+
+.hero__trust-badge:hover {
+  opacity: 1;
 }
 
 /* ============================================

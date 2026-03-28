@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found — Apexiar</title>
+  <meta name="description" content="The page you're looking for doesn't exist or has been moved.">
+  <meta name="theme-color" content="#0a0a0f">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="assets/Apexiar.webp">
+  <link rel="apple-touch-icon" href="assets/Apexiar.webp">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    .error-page {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+    .error-page__code {
+      font-size: clamp(6rem, 15vw, 12rem);
+      font-weight: 900;
+      line-height: 1;
+      background: linear-gradient(135deg, #d4a843, #b8860b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1rem;
+    }
+    .error-page__title {
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    .error-page__text {
+      color: rgba(255,255,255,0.6);
+      max-width: 480px;
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
+    }
+    .error-page__actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== NAVIGATION ===== -->
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <img src="assets/Apexiar.webp" alt="Apexiar" class="navbar__logo-img">
+      </a>
+
+      <nav class="navbar__links" id="navLinks">
+        <a href="index.html#about">About</a>
+        <a href="index.html#ecosystem">Eco-System</a>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="navbar__actions">
+        <a href="https://www.linkedin.com/company/110718248/" target="_blank" rel="noopener noreferrer" class="navbar__social-link"><img src="assets/LinkedIn.webp" alt="LinkedIn" class="navbar__social-icon"></a>
+        <a href="contact.html" class="btn btn--primary btn--sm">Get Started</a>
+      </div>
+
+      <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== 404 CONTENT ===== -->
+  <main class="error-page">
+    <div class="error-page__code">404</div>
+    <h1 class="error-page__title">Page not found</h1>
+    <p class="error-page__text">The page you're looking for doesn't exist or has been moved. Let's get you back on track.</p>
+    <div class="error-page__actions">
+      <a href="index.html" class="btn btn--primary">Back to Home</a>
+      <a href="contact.html" class="btn btn--outline">Contact Us</a>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <div class="navbar__logo">
+          <img src="assets/Apexiar.webp" alt="Apexiar" class="footer__logo-img">
+        </div>
+        <p>Enterprise solutions for asset management, site, and operational management. Built for automation, compliance, and security first.</p>
+      </div>
+      <div class="footer__links">
+        <div class="footer__col">
+          <h4>Eco-System</h4>
+          <a href="products/artemis.html">Artemis</a>
+          <a href="products/atlas.html">Atlas</a>
+          <a href="products/amis.html">AMIS</a>
+          <a href="products/axis.html">Axis</a>
+          <a href="products/assure.html">Assure</a>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <a href="index.html#about">About</a>
+          <a href="blog.html">Blog</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <a href="privacy.html">Privacy</a>
+          <a href="cookies.html">Cookies</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>&copy; 2026 Apexiar. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

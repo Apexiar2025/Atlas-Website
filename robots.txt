@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://apexiar.co.uk/sitemap.xml
+Sitemap: https://www.apexiar.co.uk/sitemap.xml
